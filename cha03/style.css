@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "system-ui", sans-serif;
+  background-color: #efefef;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+header {
+  padding: 2rem 4rem;
+  /* background-color: #333;
+color: #fff; */
+  border-bottom: 2px solid #29213f;
+}
+
+header ul {
+  list-style-type: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; */
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  aspect-ratio: 1;
+  /* border-radius: 50%; we got a good avatar */
+  object-fit: cover;
+  filter: drop-shadow(
+    0 0 10px rgba(0, 0, 0, 0.5)
+  ); /* look how beautiful our colors are, y using grayscale? :7 */
+  margin: 1rem auto;
+}
+
+h1 {
+  text-align: center;
+  color: peru;
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem 4rem;
+}
+
+main section {
+  margin-bottom: 3rem;
+}
+
+p {
+  max-width: 80ch;
+}
+
+/* to check again: is it really workin'??? */
+section li h3,
+section li p {
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* end of part to check */
+
+/* optional */
+header ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#footer {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: orange;
+}
