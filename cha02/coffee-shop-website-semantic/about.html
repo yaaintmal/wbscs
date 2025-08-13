@@ -6,32 +6,42 @@
     <title>da coffee shop</title>
   </head>
   <body>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <!-- using 'align' for the sake of just using html, vscode tells me I'm outdated, but we don't use any css yet -->
-    <div align="center" id="header">
-      <img src="logo.png" alt="a cup of coffee" />
-      <h1>About us</h1>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- using 'align' for the sake of just using html, vscode tells me I'm outdated, but we don't use any css yet -->
+      <section align="center" id="header">
+        <img src="logo.png" alt="a cup of coffee" />
+        <h1>About us</h1>
+      </section>
+    </header>
+    <main>
+      <section id="about">
+        <p>
+          Mal's Coffee Shop was born out of a love for great coffee and
+          community. We believe the best conversations happen over a freshly
+          brewed cup. Our beans are carefully selected, and our pastries are
+          baked with passion.
+        </p>
+        <p>Stop by and become part of our story!</p>
+      </section>
 
-    <div id="about">
-      <p>
-        Mal's Coffee Shop was born out of a love for great coffee and community.
-        We believe the best conversations happen over a freshly brewed cup. Our
-        beans are carefully selected, and our pastries are baked with passion.
-      </p>
-      <p>Stop by and become part of our story!</p>
-    </div>
-
-    <div id="rndcoffeepic">
-      <img
-        src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg"
-        width="100%"
-        alt="Photo by Thought Catalog: https://www.pexels.com/photo/white-ceramic-teacup-with-saucer-near-two-books-above-gray-floral-textile-904616/"
-      />
-    </div>
+      <figure id="rndcoffeepic">
+        <img
+          src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg"
+          width="100%"
+          alt="Photo by Thought Catalog: https://www.pexels.com/photo/white-ceramic-teacup-with-saucer-near-two-books-above-gray-floral-textile-904616/"
+        />
+        <figcaption>
+          Photo by Thought Catalog:
+          https://www.pexels.com/photo/white-ceramic-teacup-with-saucer-near-two-books-above-gray-floral-textile-904616/
+        </figcaption>
+      </figure>
+    </main>
   </body>
 </html>
