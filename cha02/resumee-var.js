@@ -1,18 +1,19 @@
-let start = 0
+let start = 0;
 
 // user info variables
-let title = "Full Stack Developer"
+let title = "Full Stack Developer";
 
-let username = "Mal Alatete"
-let email = "lM5Y0@example.com"
-let phone = "+237 696 696 696"
-let introduction = "An enthusiastic and driven professional with a 20-year background in sales, project management, and technical documentation, transitioning into full-stack web and app development. Leveraging a unique blend of experience in B2B and B2C environments, including technical project work in fiber optic infrastructure, I am adept at problem-solving, client communication, and managing complex projects from conception to completion. I am now applying these skills to build dynamic and user-centric applications using modern web technologies. I am a quick and dedicated learner, eager to contribute to a collaborative development team."
+let username = "Mal Alatete";
+let email = "lM5Y0@example.com";
+let phone = "+237 696 696 696";
+let introduction =
+  "An enthusiastic and driven professional with a 20-year background in sales, project management, and technical documentation, transitioning into full-stack web and app development. Leveraging a unique blend of experience in B2B and B2C environments, including technical project work in fiber optic infrastructure, I am adept at problem-solving, client communication, and managing complex projects from conception to completion. I am now applying these skills to build dynamic and user-centric applications using modern web technologies. I am a quick and dedicated learner, eager to contribute to a collaborative development team.";
 
 // not defined yet
-let summary = title
+let summary = title;
 
 // document infos
-let document_title = `Resumee of ${username}`
+let document_title = `Resumee of ${username}`;
 
 let contactbox = `
     <ul>
@@ -48,8 +49,8 @@ let edu = `
     </ul>
 `;
 
-const titleEl = document.getElementById("document_title")
-titleEl.innerText = document_title
+const titleEl = document.getElementById("document_title");
+titleEl.innerText = document_title;
 
 // constructing resume like it was asked in chapter 2
 let resume = `
@@ -60,7 +61,7 @@ let resume = `
     ${exp}
     ${edu}
     ${skill_interests}
-`
+`;
 
-const resumeEl = document.getElementById("resume")
-resumeEl.innerHTML = resume
+const resumeEl = document.getElementById("resume");
+resumeEl.innerHTML = resume;
