@@ -94,3 +94,7 @@ header ul li {
   background-color: #333;
   color: orange;
 }
+
+#footer p {
+  text-align: left;
+}
