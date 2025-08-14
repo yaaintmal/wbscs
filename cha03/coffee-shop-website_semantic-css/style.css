@@ -108,6 +108,10 @@ header {
 
 .nav-container {
   background-color: #333;
+  align-items: stretch;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 255px;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -115,10 +119,13 @@ header {
 
 .nav-list {
   list-style: none;
+  text-align: center;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .nav-list li {
