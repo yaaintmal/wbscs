@@ -107,7 +107,7 @@
 
 .windows-xp-error-message .title-bar {
   background-image: linear-gradient(to right, #003399, #66ccff);
-  padding: 5px;
+  padding: 2px;
   border-bottom: 1px solid #c0c0c0;
   position: relative;
   color: #ffffff;
@@ -119,7 +119,7 @@
   top: 5px;
   left: 5px;
   width: 32px;
-  height: 32px;
+  height: 22px;
   background-image: url("https://i.postimg.cc/wTQJ3hgb/error.png");
   background-size: 32px 32px;
   cursor: pointer;
@@ -127,6 +127,11 @@
 
 .windows-xp-error-message .error-message {
   padding: 20px;
+  text-align: left;
+}
+
+.windows-xp-error-message .title-bar h2 {
+  margin: 0;
   text-align: left;
 }
 
