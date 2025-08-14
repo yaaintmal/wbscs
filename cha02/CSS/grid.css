@@ -1,0 +1,33 @@
+.gallery-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.gallery {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1fr 2fr 1fr);
+  gap: 2rem;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* One column for even smaller screens */
+  }
+}
