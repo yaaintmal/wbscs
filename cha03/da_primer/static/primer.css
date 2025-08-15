@@ -191,6 +191,7 @@ body {
   height: 8vh;
   padding: 5px 5px; /* add some space around the text */
   margin-top: 2rem;
+  text-align: justify;
 }
 
 .video-section {
@@ -260,6 +261,7 @@ body {
   max-width: 80%; /* set maximum width to 50% */
   margin: 0 auto; /* center the text horizontally */
   font-size: smaller;
+  text-align: justify;
 }
 .feature-title h2 {
   text-align: center;
@@ -371,7 +373,7 @@ a:hover {
 .features-pricing,
 .features-pricing p,
 .features-pricing li {
-  margin-bottom: 40px;
+  margin-bottom: 1.5vh;
   font-size: small;
 }
 
@@ -389,6 +391,7 @@ a:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .feature h3 {
@@ -405,6 +408,10 @@ a:hover {
 
 .feature li {
   margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
 }
 
 footer {
