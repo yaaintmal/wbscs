@@ -230,7 +230,7 @@ body {
   border: 1px solid #ddd; /* light gray border */
   border-radius: 10px; /* rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
-  width: 30%; /* take up half of the parent element's width */
+  width: 50%; /* take up half of the parent element's width */
   margin: 40px auto; /* center horizontally and add some space around */
   font-size: smaller;
   align-items: center;
