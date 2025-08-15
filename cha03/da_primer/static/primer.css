@@ -160,7 +160,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 50%;
-  height: 4vh;
+  height: 6vh;
   padding: 5px 5px; /* add some space around the text */
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -173,8 +173,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 50%;
-  height: 6vh;
+  width: 90%;
+  height: 8vh;
   padding: 5px 5px; /* add some space around the text */
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -342,10 +342,11 @@ a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
+  filter: drop-shadow(0 0 10px rgb(230, 193, 28));
 }
 a:hover {
-  color: rgb(255, 255, 255);
+  color: orange;
   text-decoration: none;
   font-weight: bold;
-  filter: drop-shadow(0 0 10px rgb(255, 174, 0));
+  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
 }
