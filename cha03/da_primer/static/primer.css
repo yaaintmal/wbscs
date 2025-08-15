@@ -206,6 +206,19 @@ body {
   justify-content: start;
   min-height: 25vh;
 }
+.product-video {
+  background-color: #ededed; /* light gray background */
+  padding: 20px; /* add some space around the content */
+  border: 1px solid #ddd; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  width: 580; /* take up half of the parent element's width */
+  margin: 40px auto; /* center horizontally and add some space around */
+  font-size: smaller;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .trusted-companies .logos object {
   filter: grayscale(100%);
@@ -222,20 +235,6 @@ body {
 
 .trusted-companies .logos svg:hover {
   filter: grayscale(0);
-}
-
-.product-video {
-  background-color: #ededed; /* light gray background */
-  padding: 20px; /* add some space around the content */
-  border: 1px solid #ddd; /* light gray border */
-  border-radius: 10px; /* rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
-  width: 50%; /* take up half of the parent element's width */
-  margin: 40px auto; /* center horizontally and add some space around */
-  font-size: smaller;
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }
 
 .features-section {
@@ -414,8 +413,16 @@ a:hover {
   font-weight: bold;
 }
 
+.imprint {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 2rem;
+}
+
 footer {
   padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #333;
   color: #fff;
   text-align: right;
