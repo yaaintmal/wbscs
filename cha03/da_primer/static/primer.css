@@ -58,19 +58,26 @@ body {
 
 .trusted-companies {
   background-color: #ededed; /* light gray background */
-  padding-top: 4vh;
   margin: 0 auto;
   max-width: 100%; /* adjust the width as needed */
   text-align: center;
   min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 0 2%;
+  gap: 10vh;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5% 5% 5% 5%;
   width: 100%;
+
+  flex-wrap: nowrap;
 }
 
 .product-info {
