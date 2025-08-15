@@ -1,0 +1,209 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #8f8f8f;
+}
+.menu {
+  display: flex;
+  padding: 2% 5% 2% 5%;
+  justify-content: space-between;
+  width: 100%; /* take full width of the parent div */
+  height: 32px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-start; /* align items to the right */
+  width: 85%; /* take half of the parent div's width */
+  gap: 10px;
+}
+
+.menu ul li:first-child {
+  margin-right: auto; /* push the first item to the left */
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  text-align: right;
+}
+.opener-demos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%; /* take full width of the parent element */
+  background-color: #c4c4c4;
+}
+
+.opener,
+.demos {
+  width: 50%; /* take half of the parent element's width */
+}
+.opener {
+  padding: 20px;
+  text-align: left;
+}
+
+.demos {
+  text-align: center;
+}
+
+.trusted-companies {
+  background-color: #ededed; /* light gray background */
+  padding-top: 4vh;
+  margin: 0 auto;
+  max-width: 100%; /* adjust the width as needed */
+  text-align: center;
+  height: 20vh;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15vh;
+  width: 100%;
+}
+
+.product-info {
+  background-color: #ededed; /* light gray background */
+  padding: 20px; /* add some space around the content */
+  border: 1px solid #ddd; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  width: 60%; /* take up half of the parent element's width */
+  margin: 40px auto; /* center horizontally and add some space around */
+  font-size: smaller;
+}
+
+.product-info h1 {
+  margin-top: 0; /* remove default margin from h1 */
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+}
+
+.product-info button {
+  margin-top: 20px;
+  background-color: #fff; /* green background */
+  color: #333; /* white text */
+  border: none; /* remove default border */
+  padding: 20px 20px; /* add some space around the text */
+  border-radius: 5px; /* rounded corners */
+  cursor: pointer; /* change cursor to pointer on hover */
+}
+
+.product-info button:hover {
+  background-color: #fcd913; /* darker green on hover */
+}
+
+.randominfobox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 4vh;
+  padding-left: 2vh;
+  padding: 5px 5px; /* add some space around the text */
+}
+.demos {
+  background-color: #ededed;
+  padding: 2% 2% 2%;
+  border: 1px solid #ddd;
+  border-radius: 85px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 25%; /* reduce the width to make it more like a smartphone */
+  max-height: fit-content;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: smaller;
+}
+.demos button {
+  margin-top: 20px;
+  background-color: #fff; /* green background */
+  color: #333; /* white text */
+  border: none; /* remove default border */
+  padding: 10px 20px; /* add some space around the text */
+  border-radius: 5px; /* rounded corners */
+  cursor: pointer; /* change cursor to pointer on hover */
+}
+.demos button:hover {
+  background-color: #fcd913; /* darker green on hover */
+}
+.demos h2 {
+  margin-top: 0; /* remove default margin from h1 */
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+}
+.demos h3 {
+  margin-top: 0; /* remove default margin from h1 */
+  padding-bottom: 1vh;
+}
+
+.video-section {
+  background-color: #ababab;
+  height: fit-content;
+  font-size: large;
+  padding: 2% 2% 2%;
+  border: 1px solid #ddd;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.trusted-companies .logos object {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out;
+}
+
+.trusted-companies .logos object:hover {
+  filter: grayscale(0);
+}
+.trusted-companies .logos svg {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out;
+}
+
+.trusted-companies .logos svg:hover {
+  filter: grayscale(0);
+}
+
+.product-video {
+  background-color: #ededed; /* light gray background */
+  padding: 20px; /* add some space around the content */
+  border: 1px solid #ddd; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  width: 30%; /* take up half of the parent element's width */
+  margin: 40px auto; /* center horizontally and add some space around */
+  font-size: smaller;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.features-section {
+  background-color: #c4c4c4;
+  height: 20vh;
+}
