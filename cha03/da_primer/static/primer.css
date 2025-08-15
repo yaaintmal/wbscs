@@ -69,7 +69,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 15vh;
+  padding: 0 2%;
   width: 100%;
 }
 
@@ -173,7 +173,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 69%;
+  width: 80%;
   height: 6vh;
   padding: 5px 5px; /* add some space around the text */
   margin-top: 1rem;
@@ -306,6 +306,8 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   font-size: smaller;
+  width: 85%;
+  margin: 0 auto;
 }
 .questions-container {
   display: flex;
@@ -391,6 +393,8 @@ a:hover {
 
 .feature h3 {
   margin-top: 0;
+  margin-bottom: 1vh;
+  font-size: small;
 }
 
 .feature ul {
