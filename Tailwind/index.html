@@ -10,9 +10,34 @@
         --color-mal: orange;
         --color-sad: #cc0000;
       }
+
+      .dark {
+        @apply bg-gray-900;
+      }
+
+      .dark .bg-white {
+        @apply bg-gray-800;
+      }
+
+      .dark .text-gray-100 {
+        @apply text-gray-200;
+      }
+
+      .dark .text-gray-200 {
+        @apply text-gray-300;
+      }
     </style>
   </head>
-  <body class="dark:bg-gray-900 bg-gray-100">
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleDark = document.getElementById("toggleDark");
+        toggleDark.addEventListener("click", () => {
+          console.log("Button clicked!");
+          document.body.classList.toggle("dark");
+        });
+      });
+    </script>
     <div
       class="bg-violot-gray h-10 w-full border-2 border-yellow-600 rounded-md my-4 p-2 flex justify-center items-center items-center"
     >
@@ -42,6 +67,26 @@
         L4 will change its bg-color on screens wider than 640px and loose its
         color on screens smaller than 768px
       </p>
+    </div>
+
+    <div
+      class="m-10 rounded-lg bg-white px-6 p-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black"
+    >
+      <p class="text-2xl font-bold text-center text-mal">L5</p>
+      <h3
+        class="text-base font-medium tracking-tight text-slate-900 dark:text-white"
+      >
+        Your WBS Journey
+      </h3>
+      <p class="mt-2 text-sm text-slate-500 dark:text-blue-100">
+        Take your chance to achieve the next level with WBS Coding School.
+      </p>
+      <button
+        id="toggleDark"
+        class="px-4 py-2 text-sm font-medium mt-8 text-blue-900 bg-blue-100 rounded-md cursor-pointer"
+      >
+        But first: toggle Dark Mode
+      </button>
     </div>
   </body>
 </html>
