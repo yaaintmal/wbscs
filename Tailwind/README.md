@@ -23,3 +23,12 @@ Custom Styles
 + customizing works not only with colors, but every html-element like 'p-[16px]'
 >> Better practise: adjust config using tailwindcss-directives ('@import', '@theme', '@source', '@utility' etc)
 
+Tipps & Tricks
++ default accent colors can be adjusted by creating accent-classes
++ tw can create fluid responsiveness, e.g. 'class="text-[min(10vw,70px)]"
++ Highlighting use selection e.g. with colors
++ reduce JS-Conditions for styling, e.g. using 'details' with an 'open' prefix
++ even the cursor can be adjusted, using 'caret'
++ more possibilities: 'before' & 'active', styles to work only on certain screen sizes like landscape or portrait, styles for ARIA and screenreader, gradients animations, apply distinc styles when printing
+
+
