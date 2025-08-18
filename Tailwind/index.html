@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Lesson 2 - 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-mal: orange;
+        --color-sad: #cc0000;
+      }
+    </style>
+  </head>
+  <body class="dark:bg-gray-900 bg-gray-100">
+    <div
+      class="bg-violot-gray h-10 w-full border-2 border-yellow-600 rounded-md my-4 p-2 flex justify-center items-center items-center"
+    >
+      <h1 class="text-center font-mono font-extrabold text-cyan-400">
+        Hello from Tailwind!
+      </h1>
+    </div>
+    <p class="text-2xl font-bold text-center text-mal">L1</p>
+    <div class="flex justify-around items-center space-x-2 mt-2">
+      <div class="h-10 w-10 rounded-full bg-black"></div>
+      <div class="h-10 w-10 rounded-full bg-mal"></div>
+      <div class="h-10 w-10 rounded-full bg-black"></div>
+    </div>
+    <p class="text-2xl font-bold text-center text-mal">L2</p>
+    <div class="grid md:grid-cols-1 gap-2 mt-2 mx-2">
+      <div class="h-10 w-10 rounded-full bg-black"></div>
+      <div class="h-10 w-10 rounded-full bg-mal"></div>
+      <div class="h-10 w-10 rounded-full bg-black"></div>
+    </div>
+    <div class="md:block hidden">
+      <p class="text-2xl font-bold text-center text-sad">
+        L3 only appears on screens wider than 768px :3
+      </p>
+    </div>
+    <div class="sm:bg-amber-400 md:bg-amber-700">
+      <p class="text-2xl font-bold text-center text-sad">
+        L4 will change its bg-color on screens wider than 640px and loose its
+        color on screens smaller than 768px
+      </p>
+    </div>
+  </body>
+</html>
