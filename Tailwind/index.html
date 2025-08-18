@@ -26,6 +26,27 @@
       .dark .text-gray-200 {
         @apply text-gray-300;
       }
+
+      @layer base {
+        .text-mal {
+          @apply text-mal;
+        }
+        .text-sad {
+          @apply text-sad;
+        }
+        h3 {
+          @apply text-2xl font-bold text-center text-mal;
+        }
+        p {
+          @apply mt-2 text-sm text-slate-500 dark:text-blue-100;
+        }
+      }
+
+      @layer components {
+        .card {
+          @apply m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black;
+        }
+      }
     </style>
   </head>
   <body class="bg-gray-100 dark:bg-gray-900">
@@ -63,7 +84,7 @@
       </p>
     </div>
     <div class="sm:bg-amber-400 md:bg-amber-700">
-      <p class="text-2xl font-bold text-center text-sad">
+      <p class="text-2xl font-bold text-center text-sad text-white">
         L4 will change its bg-color on screens wider than 640px and loose its
         color on screens smaller than 768px
       </p>
@@ -87,6 +108,10 @@
       >
         But first: toggle Dark Mode
       </button>
+    </div>
+    <p class="text-2xl font-bold text-center text-mal">L6</p>
+    <div class="card">
+      <p>Same result, using tailwindcss-directives, e.g. as a card-component</p>
     </div>
   </body>
 </html>
