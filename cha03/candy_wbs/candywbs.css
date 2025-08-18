@@ -1,0 +1,171 @@
+:root {
+  --board-size: 8; /* Define board size for easy adjustment */
+  --candy-size: 60px;
+  --gap-size: 5px;
+  --border-color: #333;
+  --background-color: #f0f8ff; /* AliceBlue */
+  --board-bg: #b0e0e6; /* PowderBlue */
+  --candy-bg: #fff;
+  --selected-border: 3px solid #ffeb3b; /* Amber */
+  --pop-duration: 0.2s;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  margin-bottom: 20px; /* Space between game and score */
+}
+
+#game-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #d81b60; /* Pink A400 */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(var(--board-size), var(--candy-size));
+  grid-template-rows: repeat(var(--board-size), var(--candy-size));
+  gap: var(--gap-size);
+  border: 5px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--board-bg);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.candy-wrapper {
+  width: var(--candy-size);
+  height: var(--candy-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For the "wbs" label */
+  box-sizing: border-box;
+  overflow: hidden; /* Hide overflowing labels if they stretch too much */
+  border-radius: 8px; /* Slightly rounded wrapper */
+  background-color: var(--candy-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.candy-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.candy-wrapper.selected {
+  border: var(--selected-border);
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.8), 0 0 20px rgba(255, 235, 59, 0.6);
+  transform: scale(1.05); /* Slightly bigger when selected */
+}
+
+.candy-wrapper.pop-animation {
+  animation: pop var(--pop-duration) ease-out forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.candy {
+  font-size: calc(var(--candy-size) * 0.7); /* Adjust emoji size */
+  line-height: 1; /* Prevent extra space around emoji */
+}
+
+.candy-wrapper .label {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 0.45em; /* Small font size for label */
+  font-weight: 700;
+  color: #fff;
+  background-color: #4a148c; /* Dark Purple */
+  padding: 1px 3px;
+  border-radius: 3px;
+  opacity: 0.9;
+  pointer-events: none; /* Make label unclickable */
+}
+
+#score-display {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #c2185b; /* Pink D-400 */
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --candy-size: 50px;
+    --gap-size: 4px;
+  }
+  #game-title {
+    font-size: 2em;
+  }
+  #game-container {
+    padding: 15px;
+  }
+  #game-board {
+    border-width: 4px;
+  }
+  #score-display {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --candy-size: 40px;
+    --gap-size: 3px;
+  }
+  #game-title {
+    font-size: 1.7em;
+  }
+  #game-container {
+    padding: 10px;
+  }
+  #game-board {
+    border-width: 3px;
+  }
+  #score-display {
+    font-size: 1.2em;
+  }
+}
