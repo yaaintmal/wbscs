@@ -17,3 +17,9 @@ Responsiveness
 Darkmode
 + darkmode in tw/css: prefix-keyword 'dark:' (based on OS or Browser)
 + there are different ways to activate DarkMode: manually via dark pr using the data-attribute
+
+Custom Styles
++ colors-values can also be utilized and applied inline using brackets like 'text-[#cc0000]' or 'bg-[#333333]'
++ customizing works not only with colors, but every html-element like 'p-[16px]'
+>> Better practise: adjust config using tailwindcss-directives ('@import', '@theme', '@source', '@utility' etc)
+
