@@ -29,12 +29,7 @@ function generateBoard() {
       board[r][c] = getRandomCandy();
     }
   }
-  // Optional: Ensure no initial matches. This can be complex,
-  // for simplicity, we let the user make the first move.
-  // If you want to remove initial matches, you'd need a loop
-  // to regenerate cells until no matches are found.
 }
-
 // Get a random candy emoji
 function getRandomCandy() {
   const randomIndex = Math.floor(Math.random() * CANDY_TYPES.length);
@@ -63,11 +58,6 @@ function renderBoard() {
       candyWrapper.appendChild(wbsLabel);
       candyWrapper.addEventListener("click", handleCandyClick);
       gameBoardElement.appendChild(candyWrapper);
-
-      // Add a slight delay for initial "pop-in" effect for each candy
-      // Not explicitly asked, but makes the initial load nicer.
-      // candyWrapper.style.animationDelay = `${(r * BOARD_SIZE + c) * 0.02}s`;
-      // candyWrapper.classList.add('initial-pop'); // You'd need CSS for .initial-pop
     }
   }
 }
@@ -76,30 +66,26 @@ function updateScoreDisplay() {
   scoreDisplayElement.textContent = `Score: ${score}`;
 }
 
-// --- Game Logic ---
+// --- Game Logic (yeah really needed) ---
 
-// Handles click events on candies
 async function handleCandyClick(event) {
-  if (isProcessing) return; // Prevent clicks during ongoing animations/processing
+  if (isProcessing) return;
 
   const clickedWrapper = event.currentTarget;
   const row = parseInt(clickedWrapper.dataset.row);
   const col = parseInt(clickedWrapper.dataset.col);
 
   if (!selectedCandy) {
-    // First candy selected
     selectedCandy = { row, col, element: clickedWrapper };
     clickedWrapper.classList.add("selected");
   } else {
-    // Second candy selected
     const { row: oldRow, col: oldCol, element: oldElement } = selectedCandy;
 
-    // Deselect the previously selected candy
     oldElement.classList.remove("selected");
 
     if (isAdjacent(oldRow, oldCol, row, col)) {
       isProcessing = true; // Start processing
-      // Perform the swap visually first, then check matches
+
       await animateSwap(oldRow, oldCol, row, col);
 
       // Swap logic in the board array
@@ -119,12 +105,11 @@ async function handleCandyClick(event) {
         [board[oldRow][oldCol], board[row][col]] = [
           board[row][col],
           board[oldRow][oldCol],
-        ]; // Swap back in array
+        ];
         renderBoard(); // Re-render after swapping back
       }
       isProcessing = false; // End processing
     } else {
-      // Not adjacent, just select the new candy
       selectedCandy = { row, col, element: clickedWrapper };
       clickedWrapper.classList.add("selected");
     }
@@ -132,7 +117,6 @@ async function handleCandyClick(event) {
   }
 }
 
-// Checks if two candies are adjacent (horizontally or vertically)
 function isAdjacent(r1, c1, r2, c2) {
   const rowDiff = Math.abs(r1 - r2);
   const colDiff = Math.abs(c1 - c2);
@@ -206,7 +190,6 @@ async function processAllMatches() {
       board[row][col] = EMPTY_CELL;
     });
 
-    // Apply gravity
     applyGravity();
 
     // Refill board with new candies
@@ -215,7 +198,6 @@ async function processAllMatches() {
     // Re-render after gravity and refill
     renderBoard();
 
-    // Check for new matches created by falling candies (cascading effect)
     currentMatches = checkMatches();
 
     // Add a small delay to see the cascade effect
@@ -256,7 +238,7 @@ function animateMatches(matchedCells) {
 
 // Checks for horizontal and vertical matches of 3 or more
 function checkMatches() {
-  const matched = new Set(); // Use a Set to store unique {row, col} strings
+  const matched = new Set();
 
   // Check horizontal matches
   for (let r = 0; r < BOARD_SIZE; r++) {
@@ -303,7 +285,6 @@ function checkMatches() {
       }
     }
   }
-  // Convert set of strings back to array of objects
   return Array.from(matched).map((str) => JSON.parse(str));
 }
 
@@ -315,11 +296,10 @@ function applyGravity() {
       if (board[r][c] === EMPTY_CELL) {
         emptySlots.push(r);
       } else if (emptySlots.length > 0) {
-        // Move candy down to the lowest empty slot
-        const targetRow = emptySlots.shift(); // Get the highest (lowest in physical board) empty slot
+        const targetRow = emptySlots.shift(); //
         board[targetRow][c] = board[r][c];
         board[r][c] = EMPTY_CELL;
-        emptySlots.push(r); // The current position is now empty
+        emptySlots.push(r);
       }
     }
   }
@@ -336,5 +316,4 @@ function refillBoard() {
   }
 }
 
-// --- Event Listener for initial setup ---
 window.addEventListener("load", initGame);
