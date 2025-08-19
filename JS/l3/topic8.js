@@ -39,3 +39,11 @@ console.log(result);
 
 result = someInt %= stringOfsomeInt; // String is converted to a number, then modulus is performed.
 console.log(result);
+
+function greeting(surname, lastname = "Doe") {
+  console.log(`Hello ${surname} ${lastname}`);
+}
+
+greeting("John");
+greeting("Jane");
+greeting("Jane", "Smith");
