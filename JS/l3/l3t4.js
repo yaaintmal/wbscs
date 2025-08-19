@@ -1,3 +1,5 @@
+let start = 0;
+
 let age = 25;
 const birthYear = 1999;
 let name = "John Doe";
