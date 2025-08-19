@@ -1,0 +1,158 @@
+/* resetting like it's the last time... */
+* {
+  margin: 2; /* I really need this for my error window content, don't judge me! */
+  padding: 2;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Using Inter, we're fakn old! */
+  background-color: #000080; /* Old Windows blue screen color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  background: linear-gradient(
+    to bottom right,
+    #4a7ab5,
+    #2f568a
+  ); /* Gradient background similar to blue screen duh */
+  background-image: url("https://i.redd.it/xa5ohjqyo3ac1.jpeg");
+  background-size: 100 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.win98-err {
+  width: 95%; /* Adjust width for smaller screens */
+  max-width: 512px; /* Max width to mimic original look */
+  border-top: 1px solid #ffffff; /* lighter border */
+  border-left: 1px solid #ffffff; /* lighter border */
+  border-right: 1px solid #000000; /* Darker border */
+  border-bottom: 1px solid #000000; /* Darker border */
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.5); /* Inner shadow for more depth, 'coz ain't no sunshine when shadows gone */
+}
+
+.win98-err-title-bar {
+  background: linear-gradient(
+    to right,
+    #000080,
+    #1084d0
+  ); /* Blue gradient, back in the days this was the newest ish tbh */
+  border-bottom: 2px solid #000000;
+  border-image: linear-gradient(
+      to right,
+      rgba(0, 93, 165, 0.5),
+      rgba(0, 57, 127, 0.5),
+      rgba(10, 47, 88, 0.5)
+    )
+    1;
+  padding: 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.win98-err-title-bar span {
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.content-area {
+  background-color: #c0c0c0; /* Standard grey background > https://colorswall.com/palette/102495 */
+
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.message-text {
+  color: #1a202c; /* they really used black back in the days, designer fault I guess */
+  font-size: 1rem;
+  flex-grow: 1; /* flex-grow conversion - getting pro man, lol */
+}
+
+/* Bottom button area */
+.btn-area {
+  background-color: #c0c0c0; /* Standard grey background > https://colorswall.com/palette/102495 */
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end; /* justify-end conversion - may I already use this? */
+}
+
+.btn-style {
+  background-color: #c3c3c3;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5); /* Depressed look :c - yeah it was sad to use win95/98 */
+  text-shadow: 1px 1px 0px #ffffff; /* Subtle text shadow */
+  padding: 8px 24px;
+  color: #1c212b;
+  /* looks cool but prob way to new for that old win98 box */
+  /* transition: all 100ms ease-in-out; transition-all duration-100 ease-in-out conversion */
+  cursor: pointer; /* Indicate it's clickable > Dau proofed */
+  font-size: 0.875rem; /* common for buttons I was told */
+}
+
+.btn-style:hover {
+  filter: brightness(
+    110%
+  ); /* hover: dat'z da way those win-buttons work, right? */
+}
+
+.btn-style:active {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.5);
+  filter: brightness(
+    90%
+  ); /* active: as soon as it's clicked it's over! Authentic WIN-Style yay! */
+}
+
+/* Custom SVG for the error icon */
+.icon_win_err {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #c00000; /* Red circle - wild, huh? */
+  border: 2px solid #a00000; /* Darker red border - it really is darker! */
+  position: relative;
+  flex-shrink: 0; /* flex-shrink-0 in TW > learned that yesterday :) */
+}
+.icon_win_err::before,
+.icon_win_err::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%; /* Size of the 'X' */
+  height: 8px; /* Thickness of the 'X' */
+  background-color: white;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 4px;
+}
+.icon_win_err::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* some more responsive adjustments, I'm already on my third coffee */
+@media (max-width: 640px) {
+  .win98-err {
+    width: 95%; /* Adjust width for smaller screens - didn't I already do that? */
+  }
+  .message-text {
+    font-size: 0.9rem; /* Smaller font on mobile using rem - yeah we're relative :o */
+  }
+}
+/* further responsive adjustments, won't drink the fourth coffee before lunch */
+/* tbd */
