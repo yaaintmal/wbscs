@@ -25,6 +25,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .win98-err {
@@ -96,6 +97,7 @@ body {
   text-shadow: 1px 1px 0px #ffffff; /* Subtle text shadow */
   padding: 8px 24px;
   color: #1c212b;
+  letter-spacing: 0.7px;
   /* looks cool but prob way to new for that old win98 box */
   /* transition: all 100ms ease-in-out; transition-all duration-100 ease-in-out conversion */
   cursor: pointer; /* Indicate it's clickable > Dau proofed */
@@ -128,6 +130,7 @@ body {
   border: 2px solid #a00000; /* Darker red border - it really is darker! */
   position: relative;
   flex-shrink: 0; /* flex-shrink-0 in TW > learned that yesterday :) */
+  box-shadow: 1px 1px 0px 0px rgba(2, 2, 2, 0.5);
 }
 .icon_win_err::before,
 .icon_win_err::after {
