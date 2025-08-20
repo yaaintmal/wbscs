@@ -196,6 +196,7 @@ main button {
   text-align: center;
   gap: 0.5rem;
   padding: 0.5rem;
+  overflow: hidden;
 }
 .destinations h2 {
   align-self: baseline;
@@ -213,8 +214,9 @@ main button {
   height: 150px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-  filter: grayscale(100%);
+  filter: grayscale(100%) blur(5px);
   transition: filter 0.3s ease-in-out;
+  transform-origin: center;
 }
 
 .destinations img:hover {
@@ -224,6 +226,8 @@ main button {
   height: 150px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  transform: scale(1.025);
+  transition: transform 0.27s ease-in-out;
 }
 
 .services {
