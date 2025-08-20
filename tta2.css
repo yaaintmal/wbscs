@@ -45,8 +45,6 @@ img {
 ul,
 ol {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 li {
@@ -58,11 +56,6 @@ li {
 /* elements */
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  max-height: fit-content;
-  height: 100vh;
   padding: 0;
   overflow-y: auto;
 }
@@ -99,7 +92,6 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 2em;
-  height: 100vh;
   margin: 0;
   padding: 0;
   overflow-y: auto;
@@ -107,20 +99,11 @@ main {
 
 header nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-header nav ul li {
-  flex-basis: 25%;
-  text-align: center;
-}
-
-header nav ul li:first-child {
-  flex-basis: 50%;
 }
 
 header nav ul li::before {
@@ -158,7 +141,6 @@ aside {
 
 aside div {
   background-color: #f7f7f7;
-  width: 300px;
   padding: 1em;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -184,7 +166,7 @@ main button {
 /* classes */
 .main {
   background-image: linear-gradient(to bottom, #333, #555);
-  color: #fff;
+  color: #ffffffde;
   padding: 2em;
   text-align: center;
   border-radius: 20px;
@@ -204,6 +186,9 @@ main button {
   display: grid;
   grid-gap: 20px;
   padding: 2em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 2rem;
 }
 
 .destinations li {
@@ -245,30 +230,30 @@ main button {
   list-style-type: none;
   list-style-image: linear-gradient(to bottom, #333, #555);
 }
-
 .destinations ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-auto-flow: dense;
   grid-gap: 20px;
   list-style: none;
 }
-
 /* more single classes */
 
 .ulightmeup {
-  width: 25%;
+  width: 100%;
   height: 100%;
   color: #555;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
   position: relative;
   transition: background-color 0.2s ease-in-out;
 }
 
 .ulightmeup:hover {
   background-color: rgba(63, 63, 63, 0.664);
-  width: 150px;
+  width: 100%;
   height: 150px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -302,6 +287,7 @@ main button {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.2s ease-in-out;
+  filter: opacity(0.8);
 }
 
 .book-your-trip-button:hover {
