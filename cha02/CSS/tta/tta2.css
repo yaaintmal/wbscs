@@ -176,3 +176,29 @@ aside div {
 aside div p {
   margin: 0;
 }
+
+main button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.7em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: background-color 0.2s ease-in-out;
+}
+.book-your-trip-button {
+  background-color: #333;
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.book-your-trip-button:hover {
+  background-color: rgba(192, 192, 192, 0.329);
+}
