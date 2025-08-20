@@ -9,8 +9,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: oklch(0.244 0.0001 270.73);
+  background-color: oklch(0.978 0.0001 270.73);
 }
 
 h1,
@@ -29,12 +29,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #cfcfcf;
+  color: oklch(0.812 0.0001 270.73);
   filter: drop-shadow(5 5 10px rgba(169, 169, 169, 0.39));
 }
 
 a:hover {
-  color: #e7e7e7ea;
+  color: oklch(0.92 0.0001 270.73);
 }
 
 img {
@@ -62,8 +62,8 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: oklch(75.402% 0.00009 271.152);
+  color: oklch(0.992 0.0001 270.73);
   padding: 0em;
   height: 10vh;
 
@@ -85,7 +85,7 @@ header nav ul li {
 }
 
 header nav a {
-  color: #fff;
+  color: oklch(0.992 0.0001 270.73);
   font-size: xx-large;
   text-decoration: none;
 }
@@ -117,7 +117,11 @@ header nav ul li::before {
   left: 0;
   width: 100%;
   height: 11%;
-  background-image: linear-gradient(to right, #cccccc2d, #ffffff44);
+  background-image: linear-gradient(
+    to right,
+    oklch(0.812 0.0001 270.73) / 0.17,
+    oklch(0.992 0.0001 270.73) / 0.27
+  );
   /* transform: translateX(-100%); */
   transition: transform 0.2s ease-in-out;
 }
@@ -127,7 +131,7 @@ header nav ul li:hover::before {
 }
 
 header nav a {
-  color: #333;
+  color: oklch(0.244 0.0001 270.73);
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -143,9 +147,9 @@ aside {
 }
 
 aside div {
-  background-color: #f7f7f7;
+  background-color: oklch(0.963 0.0001 270.73);
   padding: 1em;
-  border: 1px solid #ddd;
+  border: 1px solid oklch(0.841 0.0001 270.73);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -156,8 +160,8 @@ aside div p {
 }
 
 main button {
-  background-color: #333;
-  color: #fff;
+  background-color: oklch(0.244 0.0001 270.73);
+  color: oklch(0.992 0.0001 270.73);
   padding: 0.7em;
   border: none;
   border-radius: 10px;
@@ -178,7 +182,7 @@ main button {
   margin: 0;
   padding: 0;
   width: 80vw;
-  filter: drop-shadow(3px 3px 3 2px rgb(63, 63, 63));
+  filter: drop-shadow(3px 3px 3 2px oklch(0.368 0.0001 270.73));
   opacity: 0.9;
   position: relative;
   background-position: center;
@@ -197,7 +201,11 @@ main button {
 
 .main h1 {
   font-size: 36px;
-  color: linear-gradient(to right, #ccccccdc, #fffffff8);
+  color: linear-gradient(
+    to right,
+    oklch(0.812 0.0001 270.73),
+    oklch(0.992 0.0001 270.73)
+  );
 }
 
 .destinations {
@@ -209,25 +217,26 @@ main button {
     "a D d d";
   width: 80vw;
   margin-top: 2rem;
-  gap: 1.8rem;
-  padding: 1.5rem;
+  gap: 1.1rem;
   overflow: hidden;
 }
 .destinations_container h2 {
   text-align: left;
   padding: 0.5em 0.5em;
-  color: #666;
+  color: oklch(0.441 0.0001 270.73);
   margin-top: 2rem;
 }
 .destinations li {
-  background-color: #f7f7f7;
+  background-color: oklch(0.963 0.0001 270.73);
   padding: 1em;
-  border: 1px solid #ddd;
+  border: 1px solid oklch(0.841 0.0001 270.73);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 27vh;
+  height: 25vh;
   text-align: center;
   cursor: center;
+  overflow: hidden;
+  font-size: smaller;
 }
 
 .destinations img {
@@ -261,7 +270,11 @@ main button {
 .services li {
   padding: 1;
   list-style-type: none;
-  list-style-image: linear-gradient(to bottom, #333, #555);
+  list-style-image: linear-gradient(
+    to bottom,
+    oklch(0.244 0.0001 270.73),
+    oklch(0.368 0.0001 270.73)
+  );
 }
 .destinations ul {
   width: 100%;
@@ -273,7 +286,7 @@ main button {
 .ulightmeup {
   width: 100%;
   height: 100%;
-  color: #555;
+  color: oklch(0.368 0.0001 270.73);
   display: flex;
   align-items: center;
   justify-content: stretch;
@@ -295,8 +308,12 @@ main button {
   margin: 0 auto;
   text-align: center;
   padding: 2em;
-  background-color: #333;
-  color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    oklch(0.244 0.0001 270.73),
+    oklch(36.768% 0.00004 271.152 / 0.651)
+  );
+  color: oklch(0.992 0.0001 270.73);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   filter: drop-shadow(3px 5px 7px silver);
@@ -308,8 +325,8 @@ main button {
 }
 .book-your-trip-button {
   margin-top: 1.2rem;
-  background-color: #333;
-  color: #fff;
+  background-color: oklch(0.244 0.0001 270.73);
+  color: oklch(0.992 0.0001 270.73);
   padding: 1em 2em;
   border: none;
   border-radius: 10px;
@@ -332,7 +349,7 @@ main button {
   justify-content: center;
   width: 80vw;
   margin: 0 auto;
-  border: #333;
+  border: oklch(0.244 0.0001 270.73);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   filter: drop-shadow(3px 5px 7px silver);
@@ -352,8 +369,8 @@ main button {
 /* so much fkn luv just for the footer, watch out */
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: oklch(0.244 0.0001 270.73);
+  color: oklch(0.992 0.0001 270.73);
   padding: 2em;
   clear: both;
   position: relative;
@@ -381,7 +398,7 @@ footer .social-links a:hover {
 
 footer .copyright {
   font-size: 14px;
-  color: #666;
+  color: oklch(0.441 0.0001 270.73);
   margin-top: 1em;
   padding-right: 50vw;
 }
