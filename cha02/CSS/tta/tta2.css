@@ -7,9 +7,10 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 1em;
-  height: 15vh;
+  padding: 0em;
+  height: 10vh;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 header nav ul {
@@ -100,6 +101,17 @@ main {
 .ulightmeup {
   width: 25%;
   height: 100%;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ulightmeup:hover {
+  background-color: rgba(192, 192, 192, 0.329);
+  width: 50%;
 }
 
 header nav ul {
@@ -127,9 +139,9 @@ header nav ul li::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 16%;
-  background-image: linear-gradient(to right, #ccc, #fff);
-  transform: translateX(-100%);
+  height: 11%;
+  background-image: linear-gradient(to right, #cccccc2d, #ffffff44);
+  /* transform: translateX(-100%); */
   transition: transform 0.2s ease-in-out;
 }
 
@@ -145,6 +157,7 @@ header nav a {
   padding: 1em;
   display: block;
 }
+
 .call-to-action {
   width: 50vw;
   margin: 0 auto;
@@ -156,7 +169,6 @@ header nav a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   filter: drop-shadow(3px 5px 7px silver);
 }
-
 .call-to-action p {
   font-size: 1.2em;
   margin-bottom: 10px;
