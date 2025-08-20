@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.main {
+  background-image: linear-gradient(to bottom, #333, #555);
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.main h2 {
+  margin-bottom: 10px;
+}
+
+.destinations {
+  display: grid;
+  grid-gap: 20px;
+  padding: 2em;
+}
+
+.destinations li {
+  background-color: #f7f7f7;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destinations img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+.services li {
+  background-color: #f7f7f7;
+  padding: 1;
+  list-style-type: none;
+  list-style-image: linear-gradient(to bottom, #333, #555);
+}
+
+.destinations ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+}
+
+.ulightmeup {
+  width: 25%;
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+header nav ul li:first-child {
+  flex-basis: 50%;
+}
+
+header nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ccc, #fff);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+header nav ul li:hover::before {
+  transform: translateX(0);
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+  display: block;
+}
