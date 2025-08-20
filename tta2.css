@@ -1,0 +1,361 @@
+/* the small reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+
+a:hover {
+  color: #e7e7e7ea;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* starting styling */
+/*
+/* elements */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  max-height: fit-content;
+  height: 100vh;
+  padding: 0;
+  overflow-y: auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 0em;
+  height: 10vh;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+header nav ul li:first-child {
+  flex-basis: 50%;
+}
+
+header nav ul li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 11%;
+  background-image: linear-gradient(to right, #cccccc2d, #ffffff44);
+  /* transform: translateX(-100%); */
+  transition: transform 0.2s ease-in-out;
+}
+
+header nav ul li:hover::before {
+  transform: translateX(0);
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+  display: block;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+aside div {
+  background-color: #f7f7f7;
+  width: 300px;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+aside div p {
+  margin: 0;
+}
+
+main button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.7em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* classes */
+.main {
+  background-image: linear-gradient(to bottom, #333, #555);
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.main h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.main h2 {
+  margin-bottom: 10px;
+}
+
+.destinations {
+  display: grid;
+  grid-gap: 20px;
+  padding: 2em;
+}
+
+.destinations li {
+  background-color: #f7f7f7;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destinations img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.destinations img:hover {
+  filter: brightness(1.2) contrast(1.1) saturate(1.2);
+  transition: filter 0.3s ease-in-out;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+.services li {
+  background-color: #f7f7f7;
+  padding: 1;
+  list-style-type: none;
+  list-style-image: linear-gradient(to bottom, #333, #555);
+}
+
+.destinations ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+}
+
+/* more single classes */
+
+.ulightmeup {
+  width: 25%;
+  height: 100%;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ulightmeup:hover {
+  background-color: rgba(63, 63, 63, 0.664);
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.call-to-action {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(3px 5px 7px silver);
+}
+
+.call-to-action p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+.book-your-trip-button {
+  margin-top: 1.2rem;
+  background-color: #333;
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.book-your-trip-button:hover {
+  background-color: rgba(192, 192, 192, 0.329);
+}
+
+.services-container {
+  display: flex;
+  padding: auto;
+  flex-wrap: block;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.services-container p {
+  width: 100%;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+/* so much fkn luv just for the footer, watch out */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2em;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 5vh;
+}
+
+footer .social-links {
+  margin-top: 1em;
+}
+
+footer .social-links a {
+  margin-right: 1em;
+}
+
+footer .social-links a:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+footer .copyright {
+  font-size: 14px;
+  color: #666;
+  margin-top: 1em;
+  padding-right: 50vw;
+}
