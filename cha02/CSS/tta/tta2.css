@@ -183,7 +183,7 @@ main button {
   filter: drop-shadow(3px 5px 7px rgb(63, 63, 63));
   opacity: 0.9;
   position: relative;
-  background-size: cover;
+  background-size: stretch;
   background-position: center;
 }
 
@@ -195,11 +195,18 @@ main button {
   width: 100%;
   height: 100%;
   background-image: url("https://wallpaperbat.com/down/369462-best-deep-space-wallpaper-best");
-  background-size: cover;
+  background-size: stretch;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(5px); /* Add a blur effect to the background image */
-  z-index: -1; /* Move the pseudo-element behind the main content */
+  filter: blur(5px);
+  z-index: -1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.main:hover::before {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .main h1 {
