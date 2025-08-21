@@ -1,0 +1,258 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #adadada9;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  letter-spacing: 0.3em;
+}
+
+header nav a:hover {
+  color: #ccc;
+}
+
+/* future use*/
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+header .nav-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+  header .nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.5em;
+  }
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav li {
+    margin-right: 0;
+  }
+}
+
+/* Main section styles */
+.mal {
+  background-image: linear-gradient(to bottom, #333, #555);
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+}
+
+.mal h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.mal p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Image styles */
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: grayscale(100%) blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+img:hover {
+  filter: brightness(1.2) contrast(1.1) saturate(1.2);
+  transform: scale(1.025);
+  border-radius: 20px;
+  transition: transform 0.27s ease-in-out;
+  filter: drop-shadow(3px 5px 7px silver);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mal {
+    background-image: none;
+    padding: 1em;
+  }
+  .mal h1 {
+    font-size: 24px;
+  }
+  .mal p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mal {
+    padding: 0.5em;
+  }
+  .mal h1 {
+    font-size: 18px;
+  }
+  .mal p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .mal {
+    padding: 0.2em;
+  }
+  .mal h1 {
+    font-size: 14px;
+  }
+  .mal p {
+    font-size: 10px;
+  }
+}
+.destinations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  margin: 5rem 0;
+}
+.destinations h2 {
+  text-align: right;
+  margin: 2rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to left, #1a1a1a, #4d4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.destination {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0px 0 52px 0;
+}
+
+.destination p {
+  font-size: xx-small;
+  text-align: right;
+}
+
+.destination h3 {
+  margin-bottom: 5px;
+  font-size: smaller;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .destinations-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .destinations-container {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+}
+
+/* "featured"-article aka main report on big screens */
+@media screen and (width >= 1200px) {
+  .destination:nth-of-type(1) {
+    /* outline: 5px solid red; */
+    grid-column: 1/-3;
+    grid-row: 1/3;
+  }
+}
+
+/* btn and ftr styles */
+.book-your-trip-button {
+  margin-top: 1.2rem;
+  background-color: oklch(0.244 0.0001 270.73);
+  color: oklch(0.992 0.0001 270.73);
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  filter: opacity(0.8);
+  border: 1px solid rgba(58, 58, 58, 0.144);
+}
+
+.book-your-trip-button:hover {
+  background-color: rgba(192, 192, 192, 0.329);
+}
+footer {
+  margin-top: 5rem;
+  background-color: oklch(0.244 0.0001 270.73);
+  color: oklch(0.992 0.0001 270.73);
+  padding: 1em;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+/* coffee */
