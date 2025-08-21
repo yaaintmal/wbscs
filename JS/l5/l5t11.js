@@ -6,10 +6,12 @@ const portion1 = array.slice(0, 3);
 const portion2 = array.slice(3, 6);
 const portion3 = array.slice(6, 9);
 const portion4 = array.slice(7, 8);
-console.log(portion1);
-console.log(portion2);
-console.log(portion3);
-console.log(portion4);
+
+console.log(`Portion 1: ${portion1}`);
+console.log(`Portion 2: ${portion2}`);
+console.log(`Portion 3: ${portion3}`);
+console.log(`Portion 4: ${portion4}`);
+
 console.log(`Original array: ${array}`);
 
 if (startArray === array) {
