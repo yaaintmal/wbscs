@@ -105,6 +105,14 @@ header .nav-toggle {
   }
 }
 
+/* didn't work as intended... YET */
+
+/* @media (max-width: 320px) {
+  header {
+    display: none;
+  }
+} */
+
 /* Main section styles */
 .mal {
   background-image: linear-gradient(to bottom, #333, #555);
