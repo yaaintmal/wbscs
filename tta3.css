@@ -124,7 +124,7 @@ header .nav-toggle {
 
 .mal h1 {
   font-size: 36px;
-  margin: 3rem 0 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .mal p {
@@ -135,7 +135,6 @@ header .nav-toggle {
   filter: drop-shadow(1px 1px 5px silver);
   padding: auto;
   letter-spacing: 0.55em;
-  margin-top: 2em;
 }
 
 .about {
@@ -245,8 +244,7 @@ img:hover {
   text-align: right;
   margin: 2rem 0 1rem 0;
   padding: 0 1rem 0 1rem;
-  margin-bottom: 20px;
-  background-image: linear-gradient(to left, #1a1a1a, #4d4d4d);
+  background-image: linear-gradient(to left, #1a1a1a77, #5f5f5f50);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -295,7 +293,7 @@ img:hover {
 }
 
 /* btn and ftr styles */
-.book-your-trip-button {
+.git-button {
   margin-top: 1.2rem;
   background-color: oklch(0.244 0.0001 270.73);
   color: oklch(0.992 0.0001 270.73);
@@ -310,7 +308,7 @@ img:hover {
   border: 1px solid rgba(58, 58, 58, 0.144);
 }
 
-.book-your-trip-button:hover {
+.git-button:hover {
   background-color: rgba(192, 192, 192, 0.329);
 }
 footer {
