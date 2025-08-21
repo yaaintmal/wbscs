@@ -1,4 +1,4 @@
-/* Global styles */
+/* Global styles aka reset! */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +12,8 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header styles */
+/* Header styles and first elements */
+/*will use classes, I promise! */
 header {
   background-color: #333;
   color: #fff;
@@ -57,7 +58,7 @@ header nav a:hover {
 }
 
 header .border-gradiant {
-  background-image: linear-gradient(to left, #333, #555);
+  background-image: linear-gradient(to right, #333, #555);
   height: 7px;
   margin: 0.5em 0;
   width: 100vw;
@@ -69,28 +70,26 @@ header .border-gradiant {
   right: 0;
 }
 
-/* future use*/
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-header .nav-toggle {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
+/* This is where the media queries are consolidated for clarity and efficiency. */
 @media (max-width: 768px) {
   header nav ul {
     display: none;
   }
   header .nav-toggle {
     display: block;
+  }
+  .mal {
+    background-image: none;
+    padding: 1em;
+  }
+  .mal h1 {
+    font-size: 24px;
+  }
+  .mal p {
+    font-size: 12px;
+  }
+  .destinations-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 }
 
@@ -104,10 +103,52 @@ header .nav-toggle {
   header nav li {
     margin-right: 0;
   }
+  .mal {
+    padding: 0.5em;
+  }
+  .mal h1 {
+    font-size: 18px;
+  }
+  .mal p {
+    font-size: 10px;
+  }
+  .destinations-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 }
 
-/* didn't work as intended... YET */
+@media (max-width: 320px) {
+  .mal {
+    padding: 0.2em;
+  }
+  .mal h1 {
+    font-size: 14px;
+  }
+  .mal p {
+    font-size: 10px;
+  }
+}
 
+/* we actually got 5 bp's (1 - 5 items per row), including main-section on big screens */
+@media (min-width: 1200px) {
+  .destinations-container {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+
+  /* "featured"-article aka main report on big screens */
+  .destination:nth-of-type(1) {
+    /* outline: 5px solid red; */
+    grid-column: 1 / span 2; /* Corrected: Using 'span 2' for clarity and better practice. */
+    grid-row: 1 / span 2; /* Corrected: Using 'span 2' for clarity and better practice. */
+  }
+}
+
+/* first responsive styles for header */
+
+/* more responsive styles */
+/* adjusting title & bg on smaller screens */
+
+/* didn't work as intended... YET!!! */
 /* @media (max-width: 320px) {
   header {
     display: none;
@@ -173,7 +214,7 @@ header .nav-toggle {
   align-self: center;
 }
 
-/* Image styles */
+/* Image styles and filters */
 img {
   width: 100%;
   height: 100%;
@@ -191,7 +232,7 @@ img:hover {
   filter: drop-shadow(3px 5px 7px silver);
 }
 
-/* Responsive styles */
+/* more responsive styles // refactor, prob duplicates now, should delete but I'm hungry now! */
 @media (max-width: 768px) {
   .mal {
     background-image: none;
@@ -310,6 +351,8 @@ img:hover {
 .git-button:hover {
   background-color: rgba(192, 192, 192, 0.329);
 }
+
+/* who needs a life if you can have a footer? */
 footer {
   margin-top: 5rem;
   background-color: oklch(0.244 0.0001 270.73);
@@ -345,3 +388,21 @@ footer .copyright {
 }
 
 /* coffee */
+/* more coffe* */
+
+/* future use*/
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+header .nav-toggle {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* future use end*/
