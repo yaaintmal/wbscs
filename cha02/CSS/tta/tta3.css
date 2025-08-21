@@ -168,7 +168,15 @@ img:hover {
   padding: 20px;
   margin: 5rem 0;
 }
-
+.destinations h2 {
+  text-align: right;
+  margin: 2rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to left, #1a1a1a, #4d4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .destination {
   padding: 20px;
   border-radius: 10px;
@@ -205,15 +213,8 @@ img:hover {
 }
 
 /* "featured"-article aka main report on big screens */
-@media screen and (width <= 500px) {
-  .destination:nth-of-type(0) {
-    /* outline: 5px solid red; */
-    grid-column: 1/3;
-  }
-}
-
 @media screen and (width >= 1200px) {
-  .destination:nth-of-type(0) {
+  .destination:nth-of-type(1) {
     /* outline: 5px solid red; */
     grid-column: 1/-3;
     grid-row: 1/3;
