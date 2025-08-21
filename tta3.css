@@ -28,9 +28,10 @@ header {
 
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
-  padding: 2em;
+  gap: 2 rem;
+  padding: 0.5em;
 }
 
 header nav ul {
@@ -57,7 +58,7 @@ header nav a:hover {
 
 header .border-gradiant {
   background-image: linear-gradient(to left, #333, #555);
-  height: 10px;
+  height: 7px;
   margin: 0.5em 0;
   width: 100vw;
   margin: auto;
@@ -119,7 +120,7 @@ header .nav-toggle {
   color: #fff;
   padding: 2em;
   text-align: center;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
 }
 
 .mal h1 {
