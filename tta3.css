@@ -99,7 +99,6 @@ header .nav-toggle {
   }
   header nav {
     flex-direction: column;
-    align-items: flex-end;
   }
   header nav li {
     margin-right: 0;
@@ -112,7 +111,7 @@ header .nav-toggle {
   color: #fff;
   padding: 2em;
   text-align: center;
-  margin-top: 5.5rem;
+  margin-top: 4.5rem;
 }
 
 .mal h1 {
@@ -192,9 +191,11 @@ img:hover {
   }
   .mal h1 {
     font-size: 24px;
+    color: #4d4d4d;
   }
   .mal p {
-    font-size: 14px;
+    font-size: 12px;
+    color: #4d4d4d;
   }
 }
 
@@ -207,7 +208,7 @@ img:hover {
     color: #4d4d4d;
   }
   .mal p {
-    font-size: 12px;
+    font-size: 10px;
     color: #4d4d4d;
   }
 }
