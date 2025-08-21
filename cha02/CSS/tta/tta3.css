@@ -174,7 +174,6 @@ img:hover {
   padding: 0 1rem 0 1rem;
   margin-bottom: 20px;
   background-image: linear-gradient(to left, #1a1a1a, #4d4d4d);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .destination {
