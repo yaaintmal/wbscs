@@ -64,8 +64,7 @@ header .border-gradiant {
   width: 100vw;
   margin: auto;
   z-index: -1;
-  position: relative;
-  top: 0;
+  position: absolute; /* update: absolute should work even on mobile phones */
   left: 0;
   right: 0;
 }
@@ -209,7 +208,7 @@ header .border-gradiant {
   text-align: justify;
   letter-spacing: 0.2em;
   line-height: 2.13;
-  filter: drop-shadow(3px 5px 7px silver);
+  filter: drop-shadow(3px 5px 7px rgb(153, 153, 153));
   padding: 2em;
   align-self: center;
 }
@@ -228,8 +227,9 @@ img:hover {
   filter: brightness(1.2) contrast(1.1) saturate(1.2);
   transform: scale(1.025);
   border-radius: 20px;
+  border-color: #adadada9;
   transition: transform 0.27s ease-in-out;
-  filter: drop-shadow(3px 5px 7px silver);
+  filter: drop-shadow(3px 5px 7px rgba(192, 192, 192, 0.466));
 }
 
 /* more responsive styles // refactor, prob duplicates now, should delete but I'm hungry now! */
@@ -354,22 +354,35 @@ img:hover {
 
 /* who needs a life if you can have a footer? */
 footer {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  padding: 1rem;
   background-color: oklch(0.244 0.0001 270.73);
-  color: oklch(0.992 0.0001 270.73);
-  padding: 1em;
   clear: both;
   position: relative;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 10rem;
   height: 5rem;
+  background-image: linear-gradient(to top, #1b1b1b75, #353535);
+  border-top: 1px solid rgba(58, 58, 58, 0.144);
 }
 
 footer .social-links {
   margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* editing social links logos... new effect... rounded... overflow... floating... somehow...we will see */
+footer .social-links img {
+  width: 40px;
+  height: 40px;
 }
 
 footer .social-links a {
@@ -380,11 +393,18 @@ footer .social-links a:hover {
   opacity: 0.8;
   transition: opacity 0.2s ease-in-out;
 }
+
+.social-icons > * {
+  margin: 10px; /* add some spacing between icons */
+}
+
 footer .copyright {
   font-size: 14px;
-  color: oklch(0.441 0.0001 270.73);
+  color: oklch(30.919% 0.00004 271.152);
   margin-top: 1em;
   padding-right: 50vw;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), 0 0 15px #fff, 0 0 20px #fff,
+    0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
 }
 
 /* coffee */
