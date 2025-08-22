@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <title>yaaintmal portfolio</title>
     <link rel="stylesheet" href="tta3.css" />
   </head>
@@ -38,13 +38,13 @@
     </header>
     <main>
       <section class="mal">
-        <h1>yaaintmal.github.io/wbscs</h1>
+        <h1>wbs.proskillz.de</h1>
         <p>
           20 years of wrangling sales and projects, now building cool apps
           instead of spreadsheets.<br />Let's make something awesome together.
         </p>
 
-        <button class="git-button">GET IN TOUCH!</button>
+        <button href="#footer" class="git-button">GET IN TOUCH!</button>
       </section>
       <section id="projects" class="destinations">
         <h2>latest projects</h2>
@@ -104,10 +104,10 @@
 
           <div class="destination">
             <img src="https://picsum.photos/401" alt="Destination 4" />
-            <h3>Mal's lil cafe</h3>
+            <h3>Candy WBS</h3>
             <p>
-              Your place to escape the everyday hustle and bustle. We are more
-              than just a cafe- we are your little home away from home.
+              Yet another CandyCrushClone project to kill your lunchbreak, this
+              time with the cuttest possible UI tho :3
             </p>
           </div>
           <div class="destination">
@@ -145,8 +145,39 @@
         development team.
       </p>
     </aside>
-    <footer>
-      <p class="copyright">&copy; 2025 by WBSCS /PS</p>
+    <footer id="footer">
+      <div class="social-links">
+        <img
+          src="./static/img/github.svg"
+          alt="github"
+          class="social-icon"
+          width="24px"
+          height="24px"
+        />
+        <img
+          src="./static/img/linked.svg"
+          alt="linkedin"
+          class="social-icon"
+          width="24px"
+          height="24px"
+        />
+        <img
+          src="./static/img/insta.svg"
+          alt="instagram"
+          class="social-icon"
+          width="24px"
+          height="24px"
+        />
+        <p class="copyright">&copy; 2025 by WBSCS /PS</p>
+      </div>
     </footer>
+    <!-- just a little eventlistener for the getinTouch-button -->
+    <script>
+      document
+        .querySelector(".git-button")
+        .addEventListener("click", function () {
+          document.querySelector("#footer").scrollIntoView();
+        });
+    </script>
   </body>
 </html>
