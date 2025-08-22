@@ -219,7 +219,7 @@ header .border-gradiant {
   height: 100%;
   border-radius: 5px;
   object-fit: cover;
-  filter: grayscale(100%) blur(5px);
+  filter: grayscale(100%) blur(2px);
   transition: filter 0.3s ease-in-out;
 }
 
@@ -291,7 +291,15 @@ header .border-gradiant {
     font-size: 10px;
     color: #4d4d4d;
   }
+  footer .social-links {
+  gap: 1rem;
 }
+footer .copyright {
+  font-size: 10px;
+  margin: 0 0 0 1em
+}
+}
+
 .destinations-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -377,25 +385,24 @@ footer {
   clear: both;
   position: relative;
   bottom: 0;
-  width: 100%;
   display: flex;
-  align-items: center;
   flex-wrap: nowrap;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   gap: 10rem;
   height: 5rem;
+  width: 100%;
   background-image: linear-gradient(to top, #1b1b1b75, #919191);
   border-bottom: 1px solid rgba(58, 58, 58, 0.144);
 }
 
 footer .social-links {
-  margin-top: 1em;
   display: flex;
   flex-direction: row;
   padding: right;
   align-items: center;
   gap: 5rem;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -422,17 +429,14 @@ footer .social-links a:hover {
 footer .copyright {
   font-size: 12px;
   color: oklch(27.274% 0.00003 271.152 / 0.932);
-  margin: 0.5em 0 0 4rem;
-  padding-right: 50vw;
   filter: drop-shadow(3px 5px 7px rgba(192, 192, 192, 0.466));
   transition: transform 0.33s ease-in;
+  margin: 0 0 0 5em
 }
 
 footer .copyright:hover {
   font-size: 12px;
   color: oklch(30.919% 0.00004 271.152);
-  margin-top: 1em;
-  padding-right: 50vw;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), 0 0 15px #fff, 0 0 20px #fff,
     0 0 20px #fff, 0 0 20px #fff, 0 0 40px #fff, -6px 7px 7px #fff,
     8px 2px 6px #fff;
@@ -440,7 +444,7 @@ footer .copyright:hover {
   transform: scale(1.069);
 }
 
-/* animation ease out of textshado on hover 0.2s with keyframe */
+/* animation ease out of textshadow on hover 0.2s with keyframe */
 
 /* ease in 0.2s */
 

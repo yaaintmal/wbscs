@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <title>yaaintmal portfolio</title>
     <link rel="stylesheet" href="tta3.css" />
   </head>
@@ -44,7 +44,7 @@
           instead of spreadsheets.<br />Let's make something awesome together.
         </p>
 
-        <button class="git-button">GET IN TOUCH!</button>
+        <button href="#footer" class="git-button">GET IN TOUCH!</button>
       </section>
       <section id="projects" class="destinations">
         <h2>latest projects</h2>
@@ -145,8 +145,7 @@
         development team.
       </p>
     </aside>
-    <footer>
-      <p class="copyright">&copy; 2025 by WBSCS /PS</p>
+    <footer id="footer">
       <div class="social-links">
         <img
           src="./static/img/github.svg"
@@ -169,7 +168,16 @@
           width="24px"
           height="24px"
         />
+        <p class="copyright">&copy; 2025 by WBSCS /PS</p>
       </div>
     </footer>
+    <!-- just a little eventlistener for the getinTouch-button -->
+    <script>
+      document
+        .querySelector(".git-button")
+        .addEventListener("click", function () {
+          document.querySelector("#footer").scrollIntoView();
+        });
+    </script>
   </body>
 </html>
