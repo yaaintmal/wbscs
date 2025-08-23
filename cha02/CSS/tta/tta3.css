@@ -296,7 +296,6 @@ header .border-gradiant {
   }
   footer .copyright {
     font-size: 10px;
-    margin: 0 0 0 1em;
   }
 }
 
@@ -489,7 +488,9 @@ footer .copyright:hover {
     font-size: 10px !important;
   }
 }
-
+header nav {
+  margin: top 10em;
+}
 /* 
    Make images fit the container (no overflow)
  */
@@ -588,7 +589,7 @@ header .nav-toggle {
     width: 100%;
     background-color: #333;
     position: absolute;
-    top: 50px;
+    top: 5px;
     left: 0;
     text-align: center;
   }
