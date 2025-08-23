@@ -444,6 +444,88 @@ footer .copyright:hover {
   transform: scale(1.069);
 }
 
+/* ------------------------------------------------------------------
+   1️⃣  Reduce horizontal padding/margins on all sections
+------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    body,
+    header,
+    footer,
+    .mal,
+    .about,
+    .destinations-container,
+    .destination,
+    .social-links {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Make sure the header doesn’t overflow */
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ------------------------------------------------------------------
+   2️⃣  Scale down fonts for ultra‑small screens
+------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    .mal h1 { font-size: 20px !important; }
+    .mal p  { font-size: 12px !important; }
+
+    .destination h3 { font-size: 0.9rem !important; }
+    .destination p  { font-size: 0.7rem !important; }
+
+    footer .copyright { font-size: 10px !important; }
+}
+
+/* ------------------------------------------------------------------
+   3️⃣  Make images fit the container (no overflow)
+------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    .destination img,
+    .social-links img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Keep the hover‑scale effect but limit it a little */
+    .destination:hover img,
+    .social-links:hover img {
+        transform: scale(1.02) !important;   /* less “zoom” on tiny screens */
+    }
+}
+
+/* ------------------------------------------------------------------
+   4️⃣  Stack the footer icons vertically (they look cramped otherwise)
+------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    footer .social-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem !important;
+        justify-content: space-between;
+    }
+
+    /* Reduce icon size to fit comfortably */
+    footer .social-links img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+/* ------------------------------------------------------------------
+   5️⃣  Optional – hide the “Get in Touch” button if it looks too big
+------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    .git-button {
+        padding: 0.8em 1.2em !important;
+        font-size: 14px !important;
+    }
+}
+
+
 /* animation ease out of textshadow on hover 0.2s with keyframe */
 
 /* ease in 0.2s */
