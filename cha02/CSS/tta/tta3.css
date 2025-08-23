@@ -444,9 +444,9 @@ footer .copyright:hover {
   transform: scale(1.069);
 }
 
-/* ------------------------------------------------------------------
-   1️⃣  Reduce horizontal padding/margins on all sections
-------------------------------------------------------------------- */
+/*
+  Reduce horizontal padding/margins on all sections
+ */
 @media (max-width: 360px) {
     body,
     header,
@@ -467,9 +467,9 @@ footer .copyright:hover {
     }
 }
 
-/* ------------------------------------------------------------------
-   2️⃣  Scale down fonts for ultra‑small screens
-------------------------------------------------------------------- */
+/*
+  Scale down fonts for ultra‑small screens
+*/
 @media (max-width: 360px) {
     .mal h1 { font-size: 20px !important; }
     .mal p  { font-size: 12px !important; }
@@ -480,9 +480,9 @@ footer .copyright:hover {
     footer .copyright { font-size: 10px !important; }
 }
 
-/* ------------------------------------------------------------------
-   3️⃣  Make images fit the container (no overflow)
-------------------------------------------------------------------- */
+/* 
+   Make images fit the container (no overflow)
+ */
 @media (max-width: 360px) {
     .destination img,
     .social-links img {
@@ -497,9 +497,9 @@ footer .copyright:hover {
     }
 }
 
-/* ------------------------------------------------------------------
-   4️⃣  Stack the footer icons vertically (they look cramped otherwise)
-------------------------------------------------------------------- */
+/*
+   Stack the footer icons vertically (they look cramped otherwise)
+*/
 @media (max-width: 360px) {
     footer .social-links {
         flex-direction: row;
@@ -515,25 +515,15 @@ footer .copyright:hover {
     }
 }
 
-/* ------------------------------------------------------------------
-   5️⃣  Optional – hide the “Get in Touch” button if it looks too big
-------------------------------------------------------------------- */
+/* 
+     Optional – hide the “Get in Touch” button if it looks too big
+ */
 @media (max-width: 360px) {
     .git-button {
         padding: 0.8em 1.2em !important;
         font-size: 14px !important;
     }
 }
-
-
-/* animation ease out of textshadow on hover 0.2s with keyframe */
-
-/* ease in 0.2s */
-
-/* ease out 0.2s */
-
-/* coffee */
-/* more coffe* */
 
 /* future use*/
 header .logo {
