@@ -283,6 +283,9 @@ header .border-gradiant {
     padding: 0;
     gap: 0.5rem;
   }
+  .about-me-desc {
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width: 320px) {
@@ -384,7 +387,7 @@ header .border-gradiant {
 
 /* who needs a life if you can have a footer? */
 footer {
-  margin-top: 3rem;
+  margin-top: 0rem;
   padding: 1rem;
   background-color: oklch(0.244 0.0001 270.73);
   clear: both;
@@ -409,7 +412,8 @@ footer .social-links {
   align-items: center;
   gap: 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 95vw;
 }
 
 /* editing social links logos... new effect... rounded... overflow... floating... somehow...we will see */
@@ -436,7 +440,6 @@ footer .copyright {
   color: oklch(27.274% 0.00003 271.152 / 0.932);
   filter: drop-shadow(3px 5px 7px rgba(192, 192, 192, 0.466));
   transition: transform 0.33s ease-in;
-  margin: 0 0 0 5em;
 }
 
 footer .copyright:hover {
@@ -484,6 +487,9 @@ footer .copyright:hover {
     font-size: 12px !important;
   }
 
+  .about-me-desc {
+    padding: 0.5rem !important;
+  }
   .destination h3 {
     font-size: 0.9rem !important;
   }
@@ -562,6 +568,7 @@ header nav {
   footer .copyright {
     font-size: 8px; /* Reduce the font size */
     margin-top: 0.5rem; /* Add some margin to separate from the icons */
+    text-align: center;
   }
 }
 /* future use*/
@@ -664,7 +671,7 @@ header .nav-toggle {
 
   footer .copyright {
     font-size: 10px;
-    margin: 1rem 0 0 0;
+
     text-align: center;
   }
 }
@@ -703,7 +710,6 @@ header .nav-toggle {
 
   footer .copyright {
     font-size: 10px; /* Further reduced font size */
-    margin-left: 0.5em; /* Adjusted margin for better fit */
   }
   footer .social-links {
     flex-direction: column;
