@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working on da primer</title>
+    <link rel="stylesheet" href="static/primer.css" />
+  </head>
+  <body>
+    <header class="header" id="totop">
+      <div class="flag-container">
+        <div class="flag-icon-container">
+          <a href="./index-de.html"
+            ><img src="./static/img/flag-de.svg" class="flag-icon" alt="" /></a
+          >de
+        </div>
+        <div class="flag-icon-container">
+          <a href="./index.html"
+            ><img src="./static/img/flag-eng.svg" class="flag-icon" alt="" /></a
+          >eng
+        </div>
+        <div class="paw-icon-container">
+          <img src="./static/img/paw.png" alt="" class="paw-icon" />
+          <div>
+            <nav class="menu">
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    onclick="window.location.href='./index-de.html'"
+                    class="try-button"
+                  >
+                    zur Übersicht
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onclick="window.location.href='./index-de.html#whyalwaysmal'"
+                    class="try-button"
+                  >
+                    Funktionen
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onclick="window.location.href='./index-de.html#features-pricing'"
+                    class="try-button"
+                  >
+                    Preise
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- teaser section -->
+    <section class="teaser-section">
+      <h2 class="teaser-title">Einstellungen in Sekunden ändern</h2>
+
+      <div class="teaser-container">
+        <div class="teaser">
+          <h3>Der Laut-Übersetzer</h3>
+          <img src="static/img/ui/2.png" alt="Feature 1" class="ui-preview" />
+          <p class="teaser-description">
+            Die Kernfunktion des WoofWhisperer übersetzt Bellen, Winseln und
+            Knurren. Schluss mit Rätselraten – jetzt verstehen Sie die
+            grundlegenden Bedürfnisse und Wünsche Ihres Hundes.
+          </p>
+        </div>
+        <div class="teaser">
+          <h3>Emotions Analyse</h3>
+          <img src="static/img/ui/3.png" alt="Feature 1" class="ui-preview" />
+          <p class="teaser-description">
+            Erfahren Sie mehr über Ihr Haustier und erfassen Sie den emotionalen
+            Zustand Ihres Hundes. Diese Funktion bietet Einblicke in seine
+            Stimmung.
+          </p>
+        </div>
+        <div class="teaser">
+          <h3>Anpassbare Sprach-Pakete</h3>
+          <img src="static/img/ui/4.png" alt="Feature 1" class="ui-preview" />
+          <p class="teaser-description">
+            Personalisieren Sie die Stimme Ihres Hundes mit einer Vielzahl
+            unterhaltsamer Optionen auf eine Weise, die so einzigartig ist wie
+            er selbst.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- video section -->
+    <section class="video-section">
+      <h2>Richten Sie Ihren WOOFWHISPERER Account ein</h2>
+      <p>...und erhalten Sie die ersten 10 Minuten gratis!</p>
+      <div class="product-video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/8lGpZkjnkt4?si=UtYITydHASNzsgNf"
+          title="GitHub Pull Requests in 100 Seconds - easy as the WoofWhisperer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div><a class="scroll" href="#totop">| nach oben scrollen |</a></div>
+      <div class="imprint" id="imprint-text">Impressum (click)</div>
+      <div id="copyright-text">
+        &copy; 2025 WoofWhisperer by Team Woofwhisperer /WBSCS
+      </div>
+      <div id="imprint-container" style="display: none">
+        <br />
+        <div>This website is owned by Team Woofwhisperer.</div>
+        <div>
+          <p>
+            We are not affiliated with, associated with, or endorsed with any of
+            the mentioned 'trusted companies' above.
+          </p>
+        </div>
+        <div>
+          <strong>Contact</strong><br />Team Woofwhisperer<br />Team
+          Woofwhisperer GmbH<br />Musterstreet 27<br />12345 Awesome City<br />Wonderland
+        </div>
+        <div id="imprint-content"></div>
+      </div>
+    </footer>
+
+    <script type="module">
+      /* helper functions */
+      /* showing imprint */
+      function showImprint() {
+        const container = document.getElementById("imprint-container");
+        const content = document.getElementById("imprint-content");
+
+        /* Inhalt aus dem versteckten Text holen und einfügen */
+        content.innerHTML = document.getElementById("imprint-text").innerHTML;
+
+        /* Overlay sichtbar machen – Höhe später animieren */
+        container.style.display = "block";
+        setTimeout(() => {
+          container.style.height = "75vh"; // 0 → 75 vh
+        }, 0);
+      }
+
+      /* closing imprint, hide overlay */
+      function hideImprint() {
+        const container = document.getElementById("imprint-container");
+        container.style.height = "0";
+        setTimeout(() => {
+          container.style.display = "none";
+        }, 500); // Dauer der CSS‑Transition (siehe CSS)
+      }
+
+      /* adding EventListeners */
+      document
+        .getElementById("copyright-text")
+        .addEventListener("click", showImprint);
+
+      document
+        .getElementById("imprint-text")
+        .addEventListener("click", showImprint);
+
+      document
+        .getElementById("imprint-container")
+        .addEventListener("click", hideImprint);
+    </script>
+  </body>
+</html>

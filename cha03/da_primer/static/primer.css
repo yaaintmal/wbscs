@@ -1,3 +1,9 @@
+/* import own styles */
+/* @import style mal */
+@import url("./mal.css");
+@import url("./frank.css");
+@import url("./kira.css");
+
 /* Global Styles */
 
 * {
@@ -20,13 +26,12 @@ body {
   padding: 2% 5% 2% 5%;
   justify-content: space-between;
   width: 100%; /* take full width of the parent div */
-  height: 32px;
 }
 
 .menu ul {
   display: flex;
   justify-content: flex-start; /* align items to the right */
-  width: 85%; /* take half of the parent div's width */
+  width: 45vw; /* take half of the parent div's width */
   gap: 10px;
 }
 
@@ -335,7 +340,7 @@ body {
   margin: 10px;
   width: 30%;
   text-align: left;
-  font-size: smaller;
+  font-size: small;
 }
 .question p {
   text-align: center;
@@ -371,6 +376,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   min-height: 25vh;
+  padding-bottom: 10rem;
 }
 
 .features-pricing h2 {
@@ -393,7 +399,7 @@ a:hover {
 }
 
 .feature {
-  width: 30%;
+  width: 80%;
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
