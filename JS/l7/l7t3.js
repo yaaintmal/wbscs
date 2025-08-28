@@ -15,7 +15,7 @@ const people = [
   { name: "Carol", age: 35 },
 ];
 
-// needed for readline, won't be defined otherwise
+// needed for readline, won't be defined (declared and initialized) otherwise
 let searchName;
 
 // prompt user on the cli for a name input
