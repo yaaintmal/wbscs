@@ -9,6 +9,8 @@ let val6 = false;
 
 console.log(val1 == val2); // true
 console.log(val1 === val2); // false
+console.log(typeof val1);
+console.log(typeof val2);
 
 console.log(val3 == val4); // true
 console.log(val3 === val4); // false

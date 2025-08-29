@@ -1,4 +1,13 @@
 const numbers = [1, 2, 3, 4, 5];
+
+numbers.push(6);
+console.log("pushed 6");
+console.log(numbers); // [1, 2, 3, 4, 5, 6]
+
+numbers.pop();
+console.log("popped");
+console.log(numbers); // [1, 2, 3, 4, 5]
+
 console.log("original array: ", numbers);
 const numbersReversed = numbers.reverse();
 console.log(numbersReversed); // [5, 4, 3, 2, 1]

@@ -67,6 +67,6 @@ console.log(getDayNameExpression(6));
 // + function declaration are hoisted, therfor can be called before declaration
 // + Pros: Hoisting
 // + Cons: unexpected behavior due to hoisting
-// - function expressions while be created while assigning
+// - function expressions will be created while assigning
 // - Pros: Control and Flexibility, often used for callback functions like setTimeout() or map()
 // - Cons: No hoisting, will result in TypeError or ReferenceError if called before declaration

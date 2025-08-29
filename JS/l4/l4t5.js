@@ -5,11 +5,10 @@ const animals = ["lion", "tiger", "bear", "giraffe", "zebra", "monkey"];
 let totalanimals = 0;
 
 // iterating over the array
-for (animal in animals) {
-  totalanimals++;
+let count = 0;
+for (let animal in animals) {
+  count++;
 }
-console.log(animal);
-
 // reset counter
 totalanimals = 0;
 
