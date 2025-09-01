@@ -16,3 +16,13 @@ for (const number of numberArray) {
 }
 
 // end
+
+const ttt = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const sliceT = ttt[1][1];
+console.log(sliceT);
+console.log(ttt);

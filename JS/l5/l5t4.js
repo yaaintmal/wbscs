@@ -6,8 +6,16 @@ console.log(fruits); // Output: ['Apple', 'Mango', 'Banana', 'Cherry', 'Date']
 // Remove 1 element at index 2 and add 2 new elements
 const removed = fruits.splice(2, 1, "Grapes", "Kiwi");
 
-console.log(fruits); // Output: ['Apple', 'Mango', 'Grapes', 'Kiwi', 'Cherry', 'Date']
-console.log(removed); // Output: ['Banana']
+console.log(
+  "new fruit array after removing Banana and adding Grapes and Kiwi",
+  fruits
+); // Output: ['Apple', 'Mango', 'Grapes', 'Kiwi', 'Cherry', 'Date']
+console.log("removed items: ", removed); // Output: ['Banana']
+
+const originalArray = [1, 2, 3, 4, 5];
+const deletedElements = originalArray.splice(2, 1, 99); // remove 1 element at index 2, add 99
+// deletedElements ist [3]
+// originalArray ist [1, 2, 99, 4, 5] (geändert!)
 
 console.info(".toSpliced()");
 const months = ["Jan", "Mar", "Apr", "May"];
