@@ -11,6 +11,10 @@ console.log(fruit1, "and", fruit2);
 const firstAndThird = [fruits[0], fruits[2]];
 console.log(firstAndThird);
 
+// extract first and third element using destructuring
+const [firstFruit, , thirdFruit] = fruits;
+console.log(firstFruit, "und", thirdFruit);
+
 // Initial object
 const person = {
   name: "John Doe",
@@ -31,6 +35,10 @@ const {
   address: { city: personCity },
 } = person;
 console.log(personName, "lives in", personCity);
+
+const nurCity = person.address.city;
+console.log("Nur City ist", nurCity);
+console.log("nur: ", person.address.city);
 
 // Initial function
 function displayPerson(person) {

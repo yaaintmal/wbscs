@@ -23,3 +23,11 @@ console.log(somePersonObj["isStudent"]);
 / + Pros: allows you to use a variable for the property name, access properties with special characters or spaces (e.g., person['first-name']), or access properties that are numbers (e.g., array[0]).
 / + Cons: more verbose and can be slightly less performant in some JavaScript engines, though this difference is often negligible.
 */
+
+const sheep = {
+  location: {
+    long: 1,
+    lat: 2,
+  },
+};
+console.log(sheep.location.long);
