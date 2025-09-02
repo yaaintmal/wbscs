@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@theme {
+  --color-mal: #cc0000;
+  --color-secondary: #00ff00;
+  --color-tertiary: #0000ff;
+
+  .light {
+    @apply bg-white text-black;
+  }
+  .dark {
+    @apply bg-black text-white;
+  }
+}
+
+/* .header {
+  box-shadow: 4px 20px red, -4px 20px red;
+} */
+
+::-webkit-progress-bar {
+  background-color: rgb(6, 16, 155);
+}
+
+::-webkit-progress-value {
+  background-color: rgb(76, 0, 255);
+}
