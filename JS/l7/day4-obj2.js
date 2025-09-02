@@ -180,3 +180,13 @@ const hasExpensiveItems = items.every((item) => {
   return item.price > 100;
 });
 console.log("Has ONLY expensive items: ", hasExpensiveItems);
+
+const includeComputer = items.some((item) => {
+  return item.name === "Computer";
+});
+
+// using includes() on array to check whether a computer with any price is in array
+const includeArray = ["Computer", "Laptop", "Tablet", "Smartphone", "Printer"];
+
+const arrayIncludesComputer = includeArray.includes("Computer");
+console.log("Includes computer: ", arrayIncludesComputer);
