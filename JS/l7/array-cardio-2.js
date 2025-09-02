@@ -20,6 +20,7 @@ const inventors = [
     categories: ["man", "mathematician"],
   },
   { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
+
   {
     first: "Marie",
     last: "Curie",
@@ -58,19 +59,40 @@ const inventors = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors to retrieve only those born between 1500 and 1600
 // Expected output: an array containing two inventors: Galileo Galilei and Johannes Kepler
+const filteredInventors = inventors.filter(
+  (inventor) => inventor.year >= 1500 && inventor.year <= 1600
+);
+console.log(filteredInventors);
 
 // Array.prototype.filter()
 // 2. Filter the list of inventors to retrieve only the ones that have the "mathematician" category
 // Expected output: an array containing only one inventor: Isaac Newton
+const filteredInventors2 = inventors.filter(
+  (inventor) =>
+    inventor.categories && inventor.categories.includes("mathematician")
+);
+console.log(filteredInventors2);
 
 // Array.prototype.filter()
 // 3. Filter the list of inventors to retrieve only the ones with the category === 'physicist' AND 'man'
 // Expected output: an array containing only one inventor: Albert Einstein
+const filteredInventors3 = inventors.filter(
+  (inventor) =>
+    inventor.categories &&
+    inventor.categories.includes("physicist") &&
+    inventor.categories.includes("man")
+);
+console.log(filteredInventors3);
 
 // Array.prototype.map()
 // 4. Give us an array filled with the inventors first and last names
 // Expected output:
 // ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Marie Curie", "Johannes Kepler", "Nicolaus Copernicus", "Max Planck", "Katherine Blodgett", "Ada Lovelace", "Sarah E. Goode", …]
+
+const inventorNames = inventors.map(
+  (inventor) => inventor.first + " " + inventor.last
+);
+console.log(inventorNames);
 
 // Array.prototype.map()
 // 5. Give us an array filled only with the inventors emails
@@ -78,20 +100,44 @@ const inventors = [
 // Expected output:
 // eg: ["albert1879@inventor.com", "isaac1643@inventor.com", "galileo1564@inventor.com", "marie1867@inventor.com", "johannes1571@inventor.com", "nicolaus1473@inventor.com", "max1858@inventor.com", "katherine1898@inventor.com", "ada1815@inventor.com", "sarah e.1855@inventor.com", …]
 
+const inventorEmails = inventors.map(
+  (inventor) => inventor.first.toLowerCase() + inventor.year + "@inventor.com"
+);
+console.log(inventorEmails);
+
 // Array.prototype.sort()
 // 6. Sort the inventors by birthdate, youngest to oldest (eg: the one whose birth year is closer to us on top)
 // Expected output: an array of inventors going from "Katherine Blodgett" -> to "Nicolaus Copernicus"
 
+const sortedInventors = inventors.sort((a, b) => a.year - b.year);
+console.log(sortedInventors);
+
 // ~~~ OPTIONAL ~~~
 // Array.prototype.reduce()
 // 7. How many years did all the inventors live all together?
+
+const totalYears = inventors.reduce((allTogether, inventor) => {
+  return allTogether + inventor.passed - inventor.year;
+}, 0);
+console.log(totalYears);
 
 // ~~~~~~~~~~~~~~~~~~
 
 // Array.prototype.sort()
 // 8. Sort the inventors by years lived (both ascending and descending)
 
+const sortedInventorsByYearsLived = inventors.sort((a, b) => {
+  return b.passed - b.year - (a.passed - a.year);
+});
+console.log(sortedInventorsByYearsLived);
+
+const sortedInventorsByYearsLivedDesc = inventors.sort((a, b) => {
+  return a.passed - a.year - (b.passed - b.year);
+});
+console.log(sortedInventorsByYearsLivedDesc);
+
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// oh la la... Paris je t'aime :3 j'ai vu pas mal de boulevards... :7
 
 const boulevardsInParis = [
   "Boulevard Auguste-Blanqui",
@@ -129,7 +175,22 @@ const boulevardsInParis = [
 
 // Array.prototype.filter()
 // 9. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// Expected output: 'Boulevard de l'Amiral-Bruix'...'Boulevard de la Zone'
 
+const boulevardsInParisWithDe = boulevardsInParis.filter((boulevard) =>
+  boulevard.includes("de")
+);
+console.log("Boulevards with include");
+console.log(boulevardsInParisWithDe);
+
+// again without include
+const boulevardsInParisWithDe2 = boulevardsInParis.filter((boulevard) => {
+  return boulevard.indexOf("de") !== -1;
+});
+console.log("Boulevards with filter");
+console.log(boulevardsInParisWithDe2);
+//
+//
 const people = [
   "Bernhard, Sandra",
   "Bethea, Erin",
@@ -177,6 +238,16 @@ const people = [
 // Array.prototype.sort()
 // 10. Sort the people alphabetically by last name
 
+const sortedPeople = people.sort((a, b) => {
+  const [aLast, aFirst] = a.split(", ");
+  const [bLast, bFirst] = b.split(", ");
+  return aLast > bLast ? 1 : -1;
+});
+
+// shouldn't I console info or log that?
+// console.log(sortedPeople);
+//
+//
 const data = [
   "car",
   "car",
@@ -197,7 +268,26 @@ const data = [
 
 // Array.prototype.reduce()
 // 11. Create an object from the data array, counting how often each word occurs.
+console.log("this ain't easy");
+const dataCount = data.reduce((acc, word) => {
+  if (acc[word]) {
+    acc[word]++;
+  } else {
+    acc[word] = 1;
+  }
+  return acc;
+}, {});
+console.log(dataCount);
 
+// again with another logic
+console.log("wild logic right here!");
+const dataCount2 = data.reduce((acc, word) => {
+  acc[word] = (acc[word] || 0) + 1;
+  return acc;
+}, {});
+console.log(dataCount2);
+
+//
 const family = [
   { name: "Lily", year: 2009 },
   { name: "Leah", year: 2011 },
@@ -207,6 +297,20 @@ const family = [
 
 // Array.prototype.some()
 // 12. Is at least one person 18 years old?
+const checkAgeAgain = family.some((person) => {
+  return person.year <= 2007;
+});
+if (checkAgeAgain) {
+  console.log("at least one person is 18 years old");
+} else {
+  console.log("no one is 18 years old");
+}
 
 // Array.prototype.every
 // 13. Do all names of the family members start with the letter L?
+const checkNameAgain = family.every((person) => {
+  return person.name[0] === "L";
+});
+if (checkNameAgain) {
+  console.log("all names start with L");
+}
