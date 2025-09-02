@@ -1,9 +1,16 @@
 // Get your shorts on - this is an array workout!
+// done!
+//
 // ## Array Cardio
 
 // Some initial data we can work with:
 // Take some time to analyze the data structure
+//
+// I did actually...
 // Do each objects have the exact same data?
+//
+// ofc they didn't- ha!
+//
 const inventors = [
   {
     first: "Albert",
