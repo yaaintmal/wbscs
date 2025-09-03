@@ -15,6 +15,7 @@ let playerScore = 0;
 let computerScore = 0;
 let selectionElement = document.getElementById("selection");
 
+//     Mark the user selected button in some way.
 // effects for btn-selection
 // adding an outline to the selected button to get a visual feedback
 // paper
@@ -65,6 +66,7 @@ btnScissors.addEventListener("click", () => {
   console.log("You selected: " + playerChoice);
 });
 
+//     Randomly select Rock, Paper, or Scissors for the computer.
 // let computer take a random choice
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
@@ -73,6 +75,7 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
+//     Compare the user’s selection with the computer’s selection.
 // function playRound for the logic to choose the winner
 function playRound(playerSelection, computerSelection) {
   let resultMsg = "";
@@ -125,24 +128,16 @@ function updateScore() {
 playButton.addEventListener("click", () => {
   const userSelection = playerChoice;
   const computerSelection = getComputerChoice();
-
+  // checking if the user selected something; if not, alert the user.
   if (userSelection === "") {
     alert("Please select a choice.");
     return;
-  }
+  } //     Display the result in the output area.
   const result = playRound(userSelection, computerSelection);
   resultDiv.textContent = result;
   //   updateScore(result); / see refactored msg
+  //     Update the score and the DOM accordingly.
   // updating score and dom
   updateScore();
   resetSelection(); // reset the selection after each round // tbc: not working as expected
 });
-
-// checking if the user selected something; if not, alert the user.
-
-//     Mark the user selected button in some way.
-//     Randomly select Rock, Paper, or Scissors for the computer.
-//     Compare the user’s selection with the computer’s selection.
-//     Display the result in the output area.
-
-//     Update the score and the DOM accordingly.
