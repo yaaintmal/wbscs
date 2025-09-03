@@ -8,7 +8,7 @@ const fetchPokemonData = async () => {
   // Clear any previous content
   pokemonContainer.innerHTML = "";
 
-  // Add a loading spinner while data is being fetched
+  // Adding load-spinner while we're fetching
   const loadingSpinner = document.createElement("div");
   loadingSpinner.className =
     "w-16 h-16 border-4 border-dashed rounded-full animate-spin border-yellow-500 mt-20";
