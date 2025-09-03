@@ -65,30 +65,30 @@ const createPokemonCard = (pokemonData) => {
   };
   const typeColorClass = typeColors[type] || "bg-gray-500";
 
-  // Create the main card element
+  // creaing main card element...
   const card = document.createElement("div");
   card.className = `pokemon-card transform transition-transform duration-300 hover:scale-105 ${typeColorClass} rounded-lg shadow-xl p-4 flex flex-col items-center cursor-pointer`;
 
-  // Create the image element with alt text and a fallback
+  // and the image element with alt text and even a fallback
   const image = document.createElement("img");
   image.src = pokemonData.sprites.front_default;
   image.alt = `Image of ${pokemonData.name}`;
   image.className = "w-28 h-28 object-contain mb-2";
 
-  // Create the name element
+  // ofc also a name element
   const name = document.createElement("h2");
   name.textContent =
     pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
   name.className = "text-xl font-bold mb-1";
 
-  // Create the type element
+  // damn, each of dem has it's own type
   const typeElement = document.createElement("p");
   typeElement.textContent = `Type: ${
     type.charAt(0).toUpperCase() + type.slice(1)
   }`;
   typeElement.className = "text-sm text-gray-100 opacity-80";
 
-  // Append all elements to the card
+  // appending all elements to the card
   card.appendChild(image);
   card.appendChild(name);
   card.appendChild(typeElement);
