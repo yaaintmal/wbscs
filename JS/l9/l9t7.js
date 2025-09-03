@@ -114,13 +114,17 @@ document.head.appendChild(style);
 //1
 // selecting h1 element inside the .hero-content div
 console.log(document.querySelector(".hero-content h1"));
-console.log(document.querySelector(".nav-list a"));
+console.log(document.querySelector(".nav-list li a"));
 console.log(document.querySelector(".hero-content .btn"));
 
 //2
 document.querySelector(".header").style.backgroundColor = "#b5651d";
 document.querySelector(".hero-content h1").style.fontSize = "3rem";
-document.querySelector(".nav-list a").style.color = "#faf0e6";
+// changing the text color of all a elements inside the .nav-list to #faf0e6.
+
+document.querySelectorAll(".nav-list a").forEach((link) => {
+  link.style.color = "#faf0e6";
+});
 
 //3
 const heroContentEl = document.querySelector(".hero-content");
