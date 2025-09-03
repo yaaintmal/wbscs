@@ -1,13 +1,9 @@
 // You can work here or download the template
-// The API endpoint for a single Pokémon by its ID
 const API_URL = "https://pokeapi.co/api/v2/pokemon/";
 
 const pokemonContainer = document.getElementById("pokemon-container");
 
-/**
- * Fetches data for the first 150 Pokémon and renders them as cards.
- * Uses an asynchronous approach with error handling.
- */
+// fetching first 150 Pokémons
 const fetchPokemonData = async () => {
   // Clear any previous content
   pokemonContainer.innerHTML = "";
@@ -42,15 +38,11 @@ const fetchPokemonData = async () => {
   }
 };
 
-/**
- * Creates a single Pokémon card element and appends it to the container.
- * @param {object} pokemonData The data object for a single Pokémon.
- */
+// Function to create a card for a single Pokémon and getting type
 const createPokemonCard = (pokemonData) => {
-  // Get the primary type for styling
   const type = pokemonData.types[0].type.name;
 
-  // Use a color map for type-based card styling
+  // since all pokes seems to have a special type (wasn't really into dat), we use a color map for type-based card styling
   const typeColors = {
     fire: "bg-red-500",
     water: "bg-blue-600",
