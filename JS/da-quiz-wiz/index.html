@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/style.css" />
+    <!-- <link rel="stylesheet" href="./static/mal.css" />
+    <link rel="stylesheet" href="./static/mal2.css" /> -->
+    <title>
+      WWDWBSCSCSW - Wer wird Deutschlands WBS Coding School Code Skill Wizard?
+    </title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/img/tux/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <h1 class="main-title">WBS/CS: Coding Quiz Wiz</h1>
+      <div class="container" id="game-container">
+        <!-- mca: updated layout -->
+        <div class="main-content">
+          <!-- lp: wiz avatar and info board -->
+          <div class="left-panel">
+            <!-- tux-wiz + extra tile -->
+            <div id="tux-wiz-container" class="tux-wiz">
+              <h1 class="categorie-title" id="categorie-title">
+                <div class="divcqw">I am TuxWiz!</div>
+              </h1>
+              <h2 class="level-title" id="level-title">
+                They call me 'learn assistant' or just
+                <div class="divcqw">the 'Coding Quiz Wiz' :3</div>
+              </h2>
+              <div id="tux-avatar-container" class="tux-avatar-container">
+                <div>
+                  <img
+                    src="./static/img/wizard-avatar.svg"
+                    width="100"
+                    height="100"
+                    alt=""
+                    class="wizard"
+                    id="wizard-avatar"
+                  />
+                </div>
+                <!-- used for joker logic -->
+                <!-- <div id="joker-tile">
+                  <ul>
+                    <li>Joker 1</li>
+                    <li>Joker 2</li>
+                    <li>Joker 3</li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="health-bar-container" id="health-bar-container"></div>
+              <div class="mana-bar-container" id="mana-bar-container"></div>
+            </div>
+            <!-- need a scoreboard cause scoreboards are aw3sum dey say! -->
+            <div id="info-board" class="info-board">
+              <p>Score: <span id="score-display">0</span></p>
+              <p>High Score: <span id="high-score-display">0</span></p>
+            </div>
+          </div>
+
+          <!-- rp: q&a -->
+          <div class="right-panel">
+            <div id="question-container">
+              <div id="wizard-prompt" class="wizard-prompt">
+                Greetings, adventurer! Let's test your knowledge.
+              </div>
+              <h2 id="question-text" class="question-text"></h2>
+              <div id="answer-buttons" class="answer-buttons">
+                <!-- Answer buttons will be generated here by JavaScript -->
+                <div class="instructions">
+                  <p>
+                    Welcome to Wizard's WBS Quiz, a small browser-based quiz
+                    game designed to test your knowledge of web development
+                    fundamentals!
+                  </p>
+                  <br />
+                  <p>
+                    <strong>How to Play:</strong>
+                    Objective: Answer questions about HTML, CSS, and JavaScript
+                    to score points. Health: Be careful! Answering incorrectly
+                    will reduce your health. If your health reaches zero, the
+                    game is over. High Score: Your highest score is saved, so
+                    you can always try to beat your personal best.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Feedback Section -->
+            <div class="message-box">
+              <p id="feedback-message" class="feedback-message"></p>
+            </div>
+            <button id="start-button" class="start-button">Start Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./main.js"></script> -->
+    <script type="module" src="./static/js/mal.js"></script>
+  </body>
+</html>

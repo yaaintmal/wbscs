@@ -22,6 +22,16 @@ const clearBtn = document.getElementById("clear-form-btn");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // Alternative Version, good as well:
+  // try {
+  //   if (!name) {
+  //     throw new Error("Name is required");
+  //   }
+  // } catch (error) {
+  //   outputElement.textContent = error.message;
+  //   outputElement.style.color = "red";
+  // }
+
   if (
     nameInput.value === "" ||
     emailInput.value === "" ||
@@ -32,12 +42,17 @@ form.addEventListener("submit", (e) => {
   } else {
     outputElement.textContent = "Form submitted successfully!";
     outputElement.style.color = "green"; // or any other style you want to apply
+
     const formData = {
       name: nameInput.value,
       email: emailInput.value,
       message: messageInput.value,
     };
     console.log(formData);
+    outputElement.insertAdjacentHTML(
+      "afterend",
+      `<ul><li>Name: ${formData.name}</li><li>Email: ${formData.email}</li><li>Message: ${formData.message}</li></ul>`
+    );
     form.reset();
   }
 });

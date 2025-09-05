@@ -1,0 +1,57 @@
+/* animating like wizard randomly and loop infinitely on mouseover 
+  /* edited: was bs, couldn't even click the button
+  /*
+  /* animation: wiggle 1s infinite;
+  transform: scale(1.2);
+*/
+
+/* Correct and wrong answer colors */
+.correct {
+  background-color: #34d399 !important; /* bg-green-500 */
+  color: white !important;
+}
+
+.wrong {
+  background-color: #ef4444 !important; /* bg-red-500 */
+  color: white !important;
+}
+
+/* Question and answer container */
+.question-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Question text */
+.question-text {
+  font-size: 1.125rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  color: #a5c8fa; /* text-gray-800 */
+  margin-bottom: 0.5rem;
+}
+
+.feedback-message {
+  color: #f3f3f3; /* text-gray-700 */
+  line-height: 1.625; /* leading-relaxed */
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.instructions {
+  color: #f3f3f3; /* text-gray-700 */
+  line-height: 1.425; /* leading-relaxed */
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: -2.5rem;
+}
+.divcqw {
+  color: #e5b346; /* text-gray-700 */
+  line-height: 1.425; /* leading-relaxed */
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.55rem;
+}

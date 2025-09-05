@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo">Coffee Shop</a>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Menu</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Enjoy the best coffee in town.</p>
+        <a href="#" class="btn">Explore Our Menu</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>© 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Function to apply styles to elements
+      function applyStyles() {
+        // Get all elements by their class names
+        const header = document.querySelector(".header");
+        const nav = document.querySelector(".nav");
+        const logo = document.querySelector(".logo");
+        const navList = document.querySelector(".nav-list");
+        const navItems = document.querySelectorAll(".nav-item");
+        const navLinks = document.querySelectorAll(".nav-item a");
+        const hero = document.querySelector(".hero");
+        const heroContent = document.querySelector(".hero-content");
+        const h1 = heroContent.querySelector("h1");
+        const p = heroContent.querySelector("p");
+        const btn = document.querySelector(".btn");
+        const footer = document.querySelector(".footer");
+
+        // Apply styles to the header
+        header.style.backgroundColor = "#fff";
+        header.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+        header.style.padding = "1rem 0";
+
+        // Apply styles to the nav
+        nav.style.display = "flex";
+        nav.style.justifyContent = "space-between";
+        nav.style.alignItems = "center";
+        nav.style.maxWidth = "1200px";
+        nav.style.margin = "0 auto";
+        nav.style.padding = "0 1rem";
+
+        // Apply styles to the logo
+        logo.style.fontSize = "1.5rem";
+        logo.style.fontWeight = "bold";
+        logo.style.color = "#333";
+        logo.style.textDecoration = "none";
+
+        // Apply styles to the nav-list
+        navList.style.display = "flex";
+        navList.style.listStyle = "none";
+
+        // Apply styles to the nav-items and links
+        navItems.forEach((item) => {
+          item.style.marginLeft = "1.5rem";
+        });
+        navLinks.forEach((link) => {
+          link.style.textDecoration = "none";
+          link.style.color = "#333";
+          link.style.fontWeight = "bold";
+        });
+
+        // Apply styles to the hero section
+        hero.style.height = "560px";
+        hero.style.background =
+          'url("https://images.pexels.com/photos/2907301/pexels-photo-2907301.jpeg?auto=compress&cs=tinysrgb&w=640&h=853&dpr=1") no-repeat center center/cover';
+        hero.style.color = "#fff";
+
+        // Apply styles to the hero-content
+        heroContent.style.maxWidth = "600px";
+        heroContent.style.height = "100%";
+        heroContent.style.display = "flex";
+        heroContent.style.flexDirection = "column";
+        heroContent.style.justifyContent = "center";
+        heroContent.style.alignItems = "center";
+        heroContent.style.textAlign = "center";
+        heroContent.style.margin = "0 auto"; // Center hero content horizontally
+
+        // Apply styles to the hero h1 and p
+        h1.style.fontSize = "2.5rem";
+        h1.style.marginBottom = "1rem";
+        p.style.fontSize = "1.2rem";
+        p.style.marginBottom = "2rem";
+
+        // Apply styles to the button
+        btn.style.backgroundColor = "#333";
+        btn.style.color = "#fff";
+        btn.style.padding = "0.75rem 1.5rem";
+        btn.style.textDecoration = "none";
+        btn.style.borderRadius = "5px";
+        btn.style.transition = "background-color 0.3s ease";
+
+        // Add hover effect for the button
+        btn.addEventListener("mouseover", () => {
+          btn.style.backgroundColor = "#555";
+        });
+        btn.addEventListener("mouseout", () => {
+          btn.style.backgroundColor = "#333";
+        });
+
+        // Apply styles to the footer
+        footer.style.backgroundColor = "#333";
+        footer.style.color = "#fff";
+        footer.style.textAlign = "center";
+        footer.style.padding = "1rem 0";
+        footer.style.marginTop = "auto";
+      }
+
+      // Run the function when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", applyStyles);
+    </script>
+  </body>
+</html>

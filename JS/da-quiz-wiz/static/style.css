@@ -1,0 +1,6 @@
+/* importing mal.css, mal2.css, gamecomponent.css
+    and wizard.css */
+@import url("./mal.css");
+@import url("./mal2.css");
+@import url("./gamecomponent.css");
+@import url("./wizard.css");

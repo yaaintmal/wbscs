@@ -1,0 +1,62 @@
+/* gamecomponent.css */
+/* all styles for gamecomponents only */
+
+.tux-avatar-container {
+  /* Center the content horizontally */
+  display: flex;
+  justify-content: center /* Center horizontally */;
+}
+
+.health-bar-container {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: #eee;
+  border-radius: 5px;
+  display: none; /* we will set this value to "block" when the game starts */
+}
+
+.health-bar-fill {
+  height: 100%;
+  /* width: 100%; we will update THIS value with JS */
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+/* Answer buttons grid layout */
+.answer-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+/* adding top margin to first of all buttons using pseudo class first of nth child */
+.answer-buttons > :first-child {
+  margin-top: 1.25rem; /* perfect alignment with scores?! */
+}
+
+/* Answer button base styling */
+.answer-btn {
+  background-color: #e5e7eb; /* bg-gray-200 */
+  color: #1f2937; /* text-gray-800 */
+  font-weight: 500; /* font-medium */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  border-radius: 0.75rem; /* rounded-xl */
+  text-align: left;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: hand;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  animation: cubic-bezier(1, 0, 0, 1);
+}
+
+/* Answer button hover effect */
+.answer-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fdd783;
+  scale: 1.05;
+  padding: 0.5rem 1rem;
+}
