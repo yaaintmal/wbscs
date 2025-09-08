@@ -9,7 +9,7 @@
 // I did actually...
 // Do each objects have the exact same data?
 //
-// ofc they didn't- ha!
+// ofc they did not- ha!
 //
 const inventors = [
   {

@@ -1,0 +1,29 @@
+{
+  "name": "my-cli-tools",
+  "version": "1.0.0",
+  "description": "A set of simple CLI tools for rock-paper-scissors and caesar cipher encryption.",
+  "bin": {
+    "rps": "./rps.js",
+    "cenc": "./cenc.js"
+  },
+  "scripts": {
+    "build:pkg": "npm run build:pkg:rps && npm run build:pkg:cenc",
+    "build:pkg:rps": "pkg rps.js --output bin/rps-cli",
+    "build:pkg:cenc": "pkg cenc.js --output bin/cenc-cli",
+    "build:nexe": "npm run build:nexe:rps && npm run build:nexe:cenc",
+    "build:nexe:rps": "nexe rps.js -o bin/rps-cli-nexe -t linux-x64-20.11.1",
+    "build:nexe:cenc": "nexe cenc.js -o bin/cenc-cli-nexe -t linux-x64-20.11.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.0",
+    "nexe": "^4.0.0"
+  },
+  "pkg": {
+    "targets": [
+      "node20-win-x64",
+      "node20-macos-x64",
+      "node20-linux-x64"
+    ],
+    "outputPath": "bin"
+  }
+}
