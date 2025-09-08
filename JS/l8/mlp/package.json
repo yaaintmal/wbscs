@@ -20,7 +20,8 @@
     ],
     "assets": [
       "mario-win.mp3",
-      "mario-lose.mp3"
+      "mario-lose.mp3",
+      "mario-draw.mp3"
     ]
   }
 }
