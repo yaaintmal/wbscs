@@ -1,0 +1,26 @@
+{
+  "name": "Mario-Paper-Scissors",
+  "version": "1.0.0",
+  "description": "A character selection game with sound effects.",
+  "main": "mlp.js",
+  "type": "module",
+  "scripts": {
+    "start": "node mlp.js",
+    "build": "pkg .",
+    "build-win": "pkg . -t node20-win-x64",
+    "build-macos": "pkg . -t node20-macos-x64",
+    "build-linux": "pkg . -t node20-linux-x64"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.5"
+  },
+  "pkg": {
+    "scripts": [
+      "mlp.js"
+    ],
+    "assets": [
+      "mario-win.mp3",
+      "mario-lose.mp3"
+    ]
+  }
+}
