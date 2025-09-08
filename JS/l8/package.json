@@ -25,5 +25,6 @@
       "node24-linux-x64"
     ],
     "outputPath": "bin"
-  }
+  },
+  "type": "module"
 }
