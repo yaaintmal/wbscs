@@ -12,6 +12,11 @@ const winSituation = {
 
 // setting a function to determine who wins according our rules(-array)
 function whoWins(playerChoice, computerChoice) {
+  // edited: new colors for win/lose *YAY*
+  const green = "\x1b[32m"; // Green text
+  const red = "\x1b[31m"; // Red text
+  const reset = "\x1b[0m"; // Reset to default color
+
   if (playerChoice === computerChoice) {
     return "Draw!";
   }
@@ -19,11 +24,10 @@ function whoWins(playerChoice, computerChoice) {
     winSituation[playerChoice] &&
     winSituation[playerChoice].includes(computerChoice)
   ) {
-    return "You win!";
+    return `${green}You win!${reset}`; // Apply green and then reset
   }
-  return "The computer wins!";
+  return `${red}You lose!${reset}`; // Apply red and then reset
 }
-
 // starting game, getting input, displaying options, asking questions, dislaying results
 function playGame() {
   const rl = createInterface({ input, output });
