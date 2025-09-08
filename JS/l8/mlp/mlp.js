@@ -64,7 +64,8 @@ function playGame() {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
   // Display choices with improved styling
-  console.log(`\n${bgBlue}${bold}>>> Character Select <<<${reset}`);
+  console.log(`\n${bgBlue}${red}${bold}## Mario-Paper-Scissors ${reset}`);
+  console.log(`\n${bgBlue}${bold}>>> select a character <<<${reset}`);
   let start = 1;
   choices.forEach((choice) =>
     console.log(`${underline}${cyan}${start++}.${reset} ${choice}`)
