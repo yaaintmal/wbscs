@@ -1,5 +1,5 @@
 {
-  "name": "Mario-Paper-Scissors",
+  "name": "mario-paper-scissors",
   "version": "1.0.0",
   "description": "A character selection game with sound effects.",
   "main": "mlp.js",
