@@ -42,6 +42,10 @@ const fetchPokemonData = async () => {
 const createPokemonCard = (pokemonData) => {
   const type = pokemonData.types[0].type.name;
 
+  console.log(pokemonData);
+
+  const cardURL = pokemonData.cardURL;
+
   // since all pokes seems to have a special type (wasn't really into dat), we use a color map for type-based card styling
   const typeColors = {
     fire: "bg-red-500",
@@ -92,6 +96,11 @@ const createPokemonCard = (pokemonData) => {
   card.appendChild(image);
   card.appendChild(name);
   card.appendChild(typeElement);
+
+  // adding a click event listener
+  card.addEventListener("click", () => {
+    window.location.href = `poki-details.html?id=${pokemonData.id}`;
+  });
 
   // Append the card to the main container
   pokemonContainer.appendChild(card);

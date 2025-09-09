@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png?20161023215848"
+      alt="Pokemon Favicon"
+    />
+  </head>
+  <body>
+    <div class="flex flex-col md:flex-row items-center justify-center p-4">
+      <div class="md:w-1/2 p-4">
+        <h2 class="text-3xl font-bold capitalize mb-2 bg-gray-100 rounded-lg">
+          ${ pokemonData.name }
+        </h2>
+
+        <p class="text-lg mb-1">
+          <strong>Height:</strong> ${ pokemonData.height / 10 } m
+        </p>
+        <p class="text-lg mb-1">
+          <strong>Weight:</strong> ${ pokemonData.weight / 10 } kg
+        </p>
+        <p class="text-lg mb-1"><strong>Type(s):</strong> ${types}</p>
+        <p class="text-lg mb-1"><strong>Abilities:</strong> ${abilities}</p>
+      </div>
+
+      <div class="md:w-1/2 flex justify-center p-4">
+        <img
+          src="${
+          pokemonData.sprites.other.dream_world.front_default
+        }"
+          alt="Image of ${pokemonData.name}"
+          class="object-contain"
+        />
+      </div>
+    </div>
+
+    <div class="md:w-1/2 p-4">
+      <div class="bg-gray-100 rounded-lg p-4">
+        <h3 class="text-xl font-semibold mb-2">Base Stats:</h3>
+        <ul class="list-disc list-inside">
+          ${stats}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <a href="poki-api.html" class="p-4 inline-block text-amber-300"
+        >&larr; Back to all Pokémon</a
+      >
+    </div>
+  </body>
+</html>
