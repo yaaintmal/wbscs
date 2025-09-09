@@ -31,7 +31,7 @@ const fetchPokemonData = async () => {
   } catch (error) {
     console.error("Failed to fetch Pokémon data:", error);
     pokemonContainer.innerHTML = `
-            <div class="text-red-500 font-semibold text-center col-span-full mt-10">
+            <div class="text-red-500 font-semibold text-center col-span-full mt-10 ">
               Failed to load Pokémon data. Please try again later.
             </div>
           `;
@@ -67,7 +67,7 @@ const createPokemonCard = (pokemonData) => {
 
   // creaing main card element...
   const card = document.createElement("div");
-  card.className = `pokemon-card transform transition-transform duration-300 hover:scale-105 ${typeColorClass} rounded-lg shadow-xl p-4 flex flex-col items-center cursor-pointer`;
+  card.className = `pokemon-card grayscale-75 hover:grayscale-0 transition-all transform transition-transform duration-300 hover:scale-105 ${typeColorClass} rounded-lg shadow-xl p-4 flex flex-col items-center cursor-pointer saturate-50 hover:saturate-100`;
 
   // and the image element with alt text and even a fallback
   const image = document.createElement("img");
