@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="fetch.js" type="module"></script>
+    <title>Fetch API</title>
+  </head>
+  <body
+    class="h-screen bg-linear-90 from-purple-800 to-indigo-950 font-mono flex flex-col p-10 gap-10 items-center text-white text-shadow text-shadow-indigo-950"
+  >
+    <h1>Fetching!</h1>
+    <!-- Comic -->
+    <div class="flex flex-col gap-14 items-center">
+      <article class="h-96 content-center" id="comic-container">
+        <figure class="h-full">
+          <img
+            class="h-full w-full"
+            src="https://imgs.xkcd.com/comics/dimensional_lumber_tape_measure.png"
+            alt="A person with two watches is never sure what time it is, especially if I got them one of the watches."
+          />
+          <figcaption class="contain-inline-size flex justify-between">
+            <span>Dimensional Lumber Tape Measure</span>
+            <time datetime="2025-09-08">8.9.2025</time>
+          </figcaption>
+        </figure>
+      </article>
+      <button
+        id="get-comic"
+        class="bg-linear-0 from-indigo-950 to-purple-900 py-2 px-3 rounded cursor-pointer disabled:grayscale-70 disabled:cursor-default"
+      >
+        <span
+          class="bg-linear-0 from-purple-900 to-indigo-950 py-1 px-2 rounded-full"
+          >Get Comic!</span
+        >
+      </button>
+    </div>
+  </body>
+</html>
