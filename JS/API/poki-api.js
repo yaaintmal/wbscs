@@ -20,7 +20,7 @@ const fetchPokemonData = async () => {
       pokemonPromises.push(fetch(`${API_URL}${i}`).then((res) => res.json()));
     }
 
-    const allPokemon = await Promise.all(pokemonPromises);
+    const allPokemon = await Promise.all(pokemonPromises); // see also .race and .allSettled
 
     // Remove the spinner after data is fetched
     loadingSpinner.remove();

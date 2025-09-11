@@ -96,7 +96,7 @@ const renderPokemonDetails = (pokemonData) => {
     </div>
 
     <div class="mt-4">
-    <a href="poki-api.html" class="inline-block text-amber-300"
+    <a href="index.html" class="inline-block text-amber-300"
         >&larr; Back to all Pokémon</a
     >
     </div>
