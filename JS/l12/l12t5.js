@@ -11,6 +11,6 @@ Special offer: Get 50% off on all products
 setTimeout(() => {
   if (start === 0) {
     start = 1;
-    promoMessageContainer.innerHTML = message;
+    promoMessageContainer.insertAdjacentHTML("beforeend", message);
   }
 }, 5000);
