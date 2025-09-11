@@ -5,13 +5,6 @@ const userInput = document.getElementById("userInput");
 const quotesContainer = document.querySelector("ul");
 const reloadButton = document.getElementById("reload");
 
-addEventListener("submit", (e) => {
-  e.preventDefault();
-  storeUserInput(userInput.value);
-  addQuote(userInput.value);
-  userInput.value = "";
-});
-
 const storeUserInput = (quote) => {
   // making sure quote input is not empty
   if (quote) {
@@ -26,13 +19,24 @@ const addQuote = (quote) => {
   quotesContainer.appendChild(li);
 };
 
-reloadButton.addEventListener("click", () => {
-  quotesContainer.innerHTML = "";
-  quotes.forEach((quote) => {
-    addQuote(quote);
-  });
-});
-
 quotes.forEach((quote) => {
   addQuote(quote);
+});
+
+addEventListener("submit", (e) => {
+  e.preventDefault();
+  storeUserInput(userInput.value);
+  addQuote(userInput.value);
+  userInput.value = "";
+});
+
+reloadButton.addEventListener("click", () => {
+  quotesContainer.innerHTML = "";
+  if (quotes.length > 0) {
+    quotes.forEach((quote) => {
+      addQuote(quote);
+    });
+  } else {
+    console.log("No quotes to reload");
+  }
 });
