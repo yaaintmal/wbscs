@@ -26,10 +26,10 @@ function renderProducts(products) {
 }
 
 function renderError(error) {
-  const errorMessage = document.createElement("p");
-  errorMessage.className = "text-red-500 text-center";
-  errorMessage.textContent = error;
-  productGrid.appendChild(errorMessage);
+  const errorOutput = document.createElement("p");
+  errorOutput.className = "text-red-500 text-center";
+  errorOutput.textContent = error;
+  productGrid.appendChild(errorOutput);
 }
 
 export { renderProducts, renderError };
