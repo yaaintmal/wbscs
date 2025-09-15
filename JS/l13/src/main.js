@@ -1,11 +1,10 @@
 import { renderError, renderProducts } from "./ui.js";
 import { API_URL } from "./network.js";
+import { productGrid } from "./global.js";
 
 const errorMessage = "Failed to load products. Please try again later.";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const productGrid = document.querySelector("main");
-
   fetch(API_URL) //
     .then((response) => response.json())
     .then((data) => {

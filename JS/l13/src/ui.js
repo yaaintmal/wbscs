@@ -1,4 +1,6 @@
-function renderProducts(products, productGrid) {
+import { productGrid } from "./global.js";
+
+function renderProducts(products) {
   products.forEach((product) => {
     const tile = document.createElement("div");
     tile.className =
@@ -20,7 +22,7 @@ function renderProducts(products, productGrid) {
   });
 }
 
-function renderError(error, productGrid) {
+function renderError(error) {
   const errorMessage = document.createElement("p");
   errorMessage.className = "text-red-500 text-center";
   errorMessage.textContent = error;
