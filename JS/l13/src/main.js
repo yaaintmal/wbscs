@@ -1,3 +1,5 @@
+import "./style.css";
+
 import { renderError, renderProducts } from "./ui.js";
 import { API_URL } from "./network.js";
 import { errorMessage } from "./global.js";
