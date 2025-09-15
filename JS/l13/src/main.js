@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       // took the first 9 items from the data
       const products = data.slice(0, 9);
-      renderProducts(products, productGrid);
+      renderProducts(products);
     })
     .catch((error) => {
       console.error("Error fetching products:", error);
       // The error object itself is not a string, so we'll use a generic message << defined at top
-      renderError(errorMessage, productGrid);
+      renderError(errorMessage);
     });
 });
