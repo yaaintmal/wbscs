@@ -51,11 +51,17 @@ const addListItem = (task) => {
 
       // removing the deleted item from list
       li.remove();
+
+      // removing after first
+      // {
+      //   once: true;
+      // }
     });
 
     li.appendChild(deleteButton);
     // Prepend the new list item to the top of the quotes container
     quotesContainer.prepend(li);
+    // quotesContainer.insertBefore(li, quotesContainer.firstChild); ?? maybe?
   }
 };
 

@@ -1,15 +1,21 @@
-function playGame() {
-  const readline = require("node:readline");
-  const { stdin: input, stdout: output } = require("node:process");
-  const rl = readline.createInterface({ input, output });
+import { createInterface } from "node:readline";
+import { stdin, stdout } from "node:process";
+
+const playGame = () => {
+  const rl = createInterface({
+    input: stdin,
+    output: stdout,
+  });
+
   const choices = ["rock", "paper", "scissors"];
-  const choiceComputer = choices.at(Math.floor(Math.random() * choices.length));
+  const choiceComputer = choices[Math.floor(Math.random() * choices.length)];
 
   rl.question(
     "So... someone choose rock, paper or scissors. What's your choice? ",
     (choiceHuman) => {
       console.log(`You choose: ${choiceHuman}`);
-      console.log("CPU chooses " + choiceComputer);
+      console.log(`CPU chooses: ${choiceComputer}`);
+
       if (choiceHuman === choiceComputer) {
         console.log("Draw");
       } else if (
@@ -23,9 +29,9 @@ function playGame() {
       }
 
       rl.question("Play again? (y/n) ", (answer) => {
-        if (answer === "y") {
+        if (answer.toLowerCase() === "y") {
           console.log("Restarting...");
-          playGame(); // Call the playGame function recursively
+          playGame();
         } else {
           console.log("Goodbye!");
           rl.close();
@@ -33,6 +39,6 @@ function playGame() {
       });
     }
   );
-}
+};
 
-playGame(); // Start the game
+playGame();

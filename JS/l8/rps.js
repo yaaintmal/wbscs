@@ -1,5 +1,3 @@
-let start = 0;
-
 const choices = ["rock", "paper", "scissors"];
 const choiceHuman = process.argv[2];
 const choiceComputer = choices.at(Math.floor(Math.random() * choices.length)); // Math.floor(Math.random() * choices.length + 1) but we're using index;

@@ -59,8 +59,8 @@ const renderTasks = () => {
   });
 };
 
-renderTasks();
-
 reloadButton.addEventListener("click", () => {
   location.reload();
 });
+
+renderTasks();

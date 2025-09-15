@@ -8,7 +8,7 @@ const reloadButton = document.getElementById("reload");
 const storeUserInput = (quote) => {
   // making sure quote input is not empty
   if (quote) {
-    quotes.push(quote);
+    quotes.push(quote.trim());
     localStorage.setItem("quotes", JSON.stringify(quotes));
   }
 };
