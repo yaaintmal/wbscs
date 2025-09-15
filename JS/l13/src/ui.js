@@ -5,10 +5,12 @@ function renderProducts(products) {
     const tile = document.createElement("div");
     tile.className =
       "bg-zinc-300 rounded-lg shadow-md overflow-hidden text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg";
-    tile.innerHTML = `
+    tile.insertAdjacentHTML(
+      "beforeend",
+      `
                     <img src="${product.image}" alt="${
-      product.title
-    }" class="w-full h-48 object-contain p-5">
+        product.title
+      }" class="w-full h-48 object-contain p-5">
                     <div class="p-4 border-t border-gray-200">
                         <h3 class="text-lg font-normal truncate">${
                           product.title
@@ -17,7 +19,8 @@ function renderProducts(products) {
                           2
                         )}</p>
                     </div>
-                `;
+                `
+    );
     productGrid.appendChild(tile);
   });
 }
