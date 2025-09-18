@@ -6,7 +6,6 @@
 import "./App.css";
 
 // importing components
-import Nav from "./components/Navigation";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Students from "./components/Students";
