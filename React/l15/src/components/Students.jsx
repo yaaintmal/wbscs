@@ -9,7 +9,7 @@ function Students() {
     picture: "https://randomuser.me/api/portraits/men/1.jpg",
   };
   return (
-    <>
+    <article>
       <div className="image">
         <img
           src={studentData.picture}
@@ -25,7 +25,7 @@ function Students() {
         <p>Course: {studentData.course}</p>
         <p className="city">{studentData.city}</p>
       </div>
-    </>
+    </article>
   );
 }
 
