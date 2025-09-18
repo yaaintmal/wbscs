@@ -18,7 +18,6 @@ function App() {
 
   return (
     <>
-      <Nav></Nav>
       <Header></Header>
       <Hero></Hero>
       <Students></Students>
