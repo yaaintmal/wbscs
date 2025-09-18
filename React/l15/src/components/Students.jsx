@@ -1,13 +1,5 @@
-function Students() {
-  const studentData = {
-    id: 1,
-    firstName: "Testy",
-    lastName: "McTest",
-    age: 42,
-    course: "Web Development",
-    city: "Berlin",
-    picture: "https://randomuser.me/api/portraits/men/1.jpg",
-  };
+function Students(data) {
+  const studentData = data.data;
   return (
     <article>
       <div className="image">
