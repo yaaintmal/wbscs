@@ -1,4 +1,4 @@
-# React Fundamentals 🫣
+# Here wo go again 🥳
 
 Second React App during WBS Journey, using first 5 components included by App()
 
